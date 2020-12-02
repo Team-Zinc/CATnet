@@ -1,0 +1,6 @@
+name: catnet
+description: The core of catnet.
+authors: [Milo Banks, Eli Hatton]
+version: 0.1.0
+
+type: Binary # This is important, or else we don't build.
