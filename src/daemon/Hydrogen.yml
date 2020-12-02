@@ -1,5 +1,5 @@
-name: catnet
-description: The core of catnet.
+name: daemon
+description: The daemon of catnet.
 authors: [Milo Banks, Eli Hatton]
 version: 0.1.0
 
