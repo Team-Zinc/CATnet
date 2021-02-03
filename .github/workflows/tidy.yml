@@ -1,9 +1,0 @@
-name: tidy
-on: push
-jobs:
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v1
-    - uses: BSFishy/meson-build@v1.0.2
-      with:
-        action: tidy
