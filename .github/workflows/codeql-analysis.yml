@@ -24,6 +24,7 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    
 
     strategy:
       fail-fast: false
@@ -58,11 +59,6 @@ jobs:
     # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
-
-    - run: |
-       meson build
-       cd build
-       ninja
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
