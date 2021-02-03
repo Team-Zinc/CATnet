@@ -1,0 +1,31 @@
+# General information
+PROJECT_NAME          = kat
+OUTPUT_DIRECTORY      = @DOXYGEN_OUTPUT@
+OUTPUT_LANGUAGE       = English
+TAB_SIZE              = 2
+EXTRACT_ALL           = YES
+OPTIMIZE_OUTPUT_FOR_C = YES
+DOXYFILE_ENCODING     = UTF-8
+TYPEDEF_HIDES_STRUCT  = YES
+
+# Warning and progress messages
+QUIET                = YES
+WARNINGS             = YES
+WARN_IF_UNDOCUMENTED = YES
+
+# Input files
+INPUT         = @DOXYGEN_INPUT@
+EXCLUDE       = @DOXYGEN_INPUT@/tests
+FILE_PATTERNS = *.h *.hpp *.cpp *.hpp
+RECURSIVE     = YES
+
+# Output files
+GENERATE_HTML  = YES
+GENERATE_LATEX = NO
+GENERATE_RTF   = NO
+GENERATE_XML   = NO
+
+SOURCE_BROWSER = YES
+
+# HTML settings
+HTML_TIMESTAMP = NO
