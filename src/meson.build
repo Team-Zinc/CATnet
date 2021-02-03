@@ -1,3 +1,3 @@
 subdir('whisker')
-subdir('kat')
+subdir('head')
 
