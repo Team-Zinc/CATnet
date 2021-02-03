@@ -1,5 +1,5 @@
 project_source_files = [
-  'kat.cpp'
+  'head.cpp'
 ]
 
 project_dependencies = [
@@ -9,7 +9,7 @@ build_args = [
 ]
 
 project_target = executable(
-  'kat',
+  'head',
   project_source_files,
   dependencies: project_dependencies,
   install : true,
