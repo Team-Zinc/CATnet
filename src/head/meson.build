@@ -16,4 +16,5 @@ project_target = executable(
   cpp_args : build_args,
 )
 
+subdir('tests')
 subdir('docs')
