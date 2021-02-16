@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
     - uses: actions/setup-python@v1
       with:
         python-version: '3.x'
@@ -37,6 +39,8 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
     - uses: actions/setup-python@v1
       with:
         python-version: '3.x'
@@ -56,6 +60,8 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
     - uses: actions/setup-python@v1
       with:
         python-version: '3.x'

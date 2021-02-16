@@ -35,3 +35,6 @@
 # Meson build directories
 build/
 builddir/
+
+# Git submodule stuffs
+vendor/googletest/

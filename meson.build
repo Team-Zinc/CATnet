@@ -11,5 +11,7 @@ project(
   ]
 )
 
-subdir('src')
+# Build all of our vendored dependencies first
 
+subdir('vendor')
+subdir('src')
