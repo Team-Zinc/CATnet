@@ -1,8 +1,12 @@
 #include <iostream>
 #include <cstdlib>
 
+#include <log.hpp>
+
 int main(int argc, char *argv[]) {
-    std::cout << "I am a Whisker!" << argc << argv << std::endl;
+    CatnetUtils::Log::Init();
+
+    HD_INFO("I am a Whisker (CATnet)!");
 
     return EXIT_SUCCESS;
 }
