@@ -12,8 +12,15 @@ project(
 )
 
 # Build all of our wraped dependencies first
+
+# Googletest (we can add gtest_prog.get_variable('gmock_dep') to get google mock too)
 gtest_proj = subproject('gtest')
 gtest_dep = gtest_proj.get_variable('gtest_main_dep')
+
+# Spdlog
+spdlog_proj = subproject('spdlog')
+spdlog_dep = spdlog_proj.get_variable('spdlog_dep')
+spdlog_inc = spdlog_proj.get_variable('inc')
 
 # subdir('vendor')
 subdir('src')
