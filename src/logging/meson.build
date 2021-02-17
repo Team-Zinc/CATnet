@@ -29,4 +29,4 @@ logging_dep = declare_dependency(
 )
 
 subdir('tests')
-# subdir('docs')
+subdir('docs')

@@ -3,19 +3,24 @@
 
 #include <memory>
 
-// This ignores all warnings raised inside External headers
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 
 namespace CatnetUtils {
+	/// \brief A singleton class that has getters and setters for shared spdlog logger pointers.
 	class Log {
 	public:
+		/// An init function that initializes spdlog sinks, sets patterns, and regisers everything.
 		static void Init();
 
+		/// \brief A getter function for the head logger.
 		static std::shared_ptr<spdlog::logger>& GetHeadLogger() { return s_HeadLogger; }
+		/// \brief A getter function for the whisker logger.
 		static std::shared_ptr<spdlog::logger>& GetWhiskerLogger() { return s_WhiskerLogger; }
 	private:
+		/// \brief A shared pointer that, once initialized, points to a spd logger for head.
 		static std::shared_ptr<spdlog::logger> s_HeadLogger;
+		/// \brief A shared pointer that, once initialized, points to a spd logger for whisker.
 		static std::shared_ptr<spdlog::logger> s_WhiskerLogger;
 	};
 
