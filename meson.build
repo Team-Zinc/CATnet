@@ -11,7 +11,9 @@ project(
   ]
 )
 
-# Build all of our vendored dependencies first
+# Build all of our wraped dependencies first
+gtest_proj = subproject('gtest')
+gtest_dep = gtest_proj.get_variable('gtest_main_dep')
 
-subdir('vendor')
+# subdir('vendor')
 subdir('src')
