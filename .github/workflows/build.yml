@@ -28,7 +28,8 @@ jobs:
     - run: meson setup builddir/
       env:
         CC: gcc
-    - run: meson test -C builddir/ -v
+    - run: meson build -C builddir/ -v 
+    - run: ninja -C builddir 
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
@@ -49,7 +50,8 @@ jobs:
     - run: meson setup builddir/
       env:
         CC: gcc
-    - run: meson test -C builddir/ -v
+    - run: meson build -C builddir/ -v
+    - run: ninja -C builddir
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
@@ -69,7 +71,8 @@ jobs:
     - run: meson setup builddir/
       env:
         CC: gcc
-    - run: meson test -C builddir/ -v
+    - run: meson build -C builddir/ -v
+    - run: ninja -C builddir
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
