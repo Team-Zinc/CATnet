@@ -23,5 +23,4 @@ project_target = executable(
   cpp_pch : '../pch/pch.hpp'
 )
 
-subdir('tests')
 subdir('docs')

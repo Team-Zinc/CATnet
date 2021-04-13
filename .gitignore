@@ -36,5 +36,8 @@
 build/
 builddir/
 
+# Ignore VSCode shit
+.vscode
+
 # Meson wrap stuff
 subprojects/*/
