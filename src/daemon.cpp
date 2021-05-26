@@ -6,7 +6,7 @@
 int main(int argc, char *argv[]) {
     CatnetUtils::Log::Init();
 
-    HD_INFO("I am a Head (CATnet)!");
+    CND_INFO("This is the daemon speaking, please shut the fuck up.");
 
     return EXIT_SUCCESS;
 }
