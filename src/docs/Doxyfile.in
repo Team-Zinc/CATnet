@@ -1,5 +1,5 @@
 # General information
-PROJECT_NAME          = head
+PROJECT_NAME          = cn_daemon
 OUTPUT_DIRECTORY      = @DOXYGEN_OUTPUT@
 OUTPUT_LANGUAGE       = English
 TAB_SIZE              = 2

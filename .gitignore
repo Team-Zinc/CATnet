@@ -39,5 +39,8 @@ builddir/
 # Ignore VSCode shit
 .vscode
 
+# Weird .cache files?
+.cache
+
 # Meson wrap stuff
 subprojects/*/
