@@ -57,24 +57,3 @@ jobs:
       with:
         name: MacOS_Meson_Testlog
         path: build/meson-logs/testlog.txt
-
-  windows:
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Checkout submodules
-      run: git submodule update --init --recursive
-    - uses: actions/setup-python@v1
-      with:
-        python-version: '3.x'
-    - run: pip install meson ninja
-    - run: meson setup builddir/
-      env:
-        CC: gcc
-    - run: meson build -C builddir/ -v
-    - run: ninja -C builddir
-    - uses: actions/upload-artifact@v1
-      if: failure()
-      with:
-        name: Windows_Meson_Testlog
-        path: build/meson-logs/testlog.txt
