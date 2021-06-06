@@ -1,4 +1,5 @@
 subdir('logging')
+subdir('sockets')
 
 project_source_files = [
   'daemon.cpp',
@@ -6,9 +7,9 @@ project_source_files = [
   'participant/participant.cpp'
 ]
 
-project_dependencies = [cli11_dep, logging_dep]
+project_dependencies = [socket_dep, cli11_dep, logging_dep]
 build_args = []
-inc_dirs = [cli11_inc, spdlog_inc]
+inc_dirs = [socket_inc, cli11_inc, spdlog_inc]
 
 project_target = executable(
   'catnetd',

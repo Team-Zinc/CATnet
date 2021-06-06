@@ -13,15 +13,27 @@ project(
 
 # Build all of our wraped dependencies first
 
-# Spdlog
+# Spdlog (What the hell does SPD stand for?)
 spdlog_proj = subproject('spdlog')
 spdlog_dep = spdlog_proj.get_variable('spdlog_dep')
 spdlog_inc = spdlog_proj.get_variable('inc')
 
-# CLI11
+# CLI11 (Descriptive?)
 cli11_proj = subproject('cli11')
 cli11_dep = cli11_proj.get_variable('CLI11_dep')
 cli11_inc = cli11_proj.get_variable('CLI11_inc')
+
+# ProtoBuf (You need proto anti-virus!)
+# As opposed to all the other required tools and such,
+# Google Protobuf takes a long time to compile. Checking
+# for existance reduces build times on clean.
+protobuf = find_program('protoc', required: false)
+if not protobuf.found()
+  protobuf_proj = subproject('protobuf')
+endif
+
+# Sockpp (I wonder if this is a pun)
+# sockpp_proj = subproject('sockpp')
 
 # subdir('vendor')
 subdir('src')

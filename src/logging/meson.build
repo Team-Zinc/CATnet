@@ -1,5 +1,11 @@
 project_source_files = [
   'log.cpp'
+
+
+
+
+
+
 ]
 
 project_dependencies = [
@@ -22,9 +28,9 @@ logging_target = static_library(
   cpp_args : build_args,
 )
 
-logging_public_headers = include_directories('include')
+logging_inc = include_directories('include')
 logging_dep = declare_dependency(
-  include_directories: logging_public_headers,
+  include_directories: logging_inc,
   link_with : logging_target
 )
 
