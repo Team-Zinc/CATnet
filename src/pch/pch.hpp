@@ -11,9 +11,10 @@
 #include <sstream>
 #include <array>
 #include <vector>
+#include <map>
 #include <unordered_map>
 #include <unordered_set>
 
-#include "../../logging/include/log.hpp"
+#include "../logging/include/log.hpp"
 
 #endif /* PCH_HPP */
