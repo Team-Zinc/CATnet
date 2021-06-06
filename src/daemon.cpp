@@ -4,6 +4,7 @@
 #include <CLI/CLI.hpp>
 #include <spdlog/spdlog.h>
 
+#include "logging/include/log.hpp"
 #include "participant/participant.hpp"
 #include "registrar/registrar.hpp"
 

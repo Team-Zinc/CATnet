@@ -1,5 +1,7 @@
 #include "registrar.hpp"
 
+#include "../logging/include/log.hpp"
+
 Registrar::Registrar() {
     CND_TRACE("Constructing registrar....");
 }

@@ -10,7 +10,7 @@
 /// \brief A singleton class that has getters and setters for shared spdlog logger pointers.
 class Log {
 public:
-	/// \breif An init function that initializes spdlog sinks, sets patterns, and regisers everything.
+	/// \brief An init function that initializes spdlog sinks, sets patterns, and regisers everything.
 	static void Init(spdlog::level::level_enum);
 
 	/// \brief A getter function for the daemon logger.

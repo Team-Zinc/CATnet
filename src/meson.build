@@ -17,7 +17,6 @@ project_target = executable(
   include_directories : inc_dirs,
   install : true,
   cpp_args : build_args,
-  cpp_pch : './pch/pch.hpp'
 )
 
 subdir('docs')
