@@ -28,7 +28,7 @@ socket_target = static_library(
 
 socket_inc = include_directories('.')
 socket_dep = declare_dependency(
-  include_directories: logging_public_headers,
-  link_with : logging_target
+  include_directories: socket_inc,
+  link_with : socket_target
 )
 
