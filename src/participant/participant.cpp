@@ -1,5 +1,7 @@
 #include "participant.hpp"
 
+#include "../logging/include/log.hpp"
+
 Participant::Participant() {
     CND_TRACE("Constructing participant....");
 }
