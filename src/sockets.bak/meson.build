@@ -1,11 +1,11 @@
 project_source_files = [
-    'socket_compat.cpp',
-    'tcp_client_socket.cpp',
-    'tcp_server_socket.cpp',
-    'tcp_socket.cpp',
-    'udp_client_socket.cpp',
-    'udp_server_socket.cpp',
-    'udp_socket.cpp'
+    'socket_compat.hpp',
+    'tcp_client_socket.hpp',
+    'tcp_server_socket.hpp',
+    'tcp_socket.hpp',
+    'udp_client_socket.hpp',
+    'udp_server_socket.hpp',
+    'udp_socket.hpp'
 ]
 
 project_dependencies = [
