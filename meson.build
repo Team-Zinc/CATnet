@@ -13,6 +13,9 @@ project(
 
 # Build all of our wraped dependencies first
 
+# Threading support (Support Free Trade!)
+thread_dep = dependency('threads')
+
 # Spdlog (What the hell does SPD stand for?)
 spdlog_proj = subproject('spdlog')
 spdlog_dep = spdlog_proj.get_variable('spdlog_dep')
