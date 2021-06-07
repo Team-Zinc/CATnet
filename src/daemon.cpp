@@ -47,11 +47,17 @@ int main(int argc, char *argv[]) {
         Participant participant;
         participant.run();
 
+        CND_INFO("Cleaning up generally unsavory bits....");
+        participant.~Participant();
+
         return EXIT_SUCCESS;
     } else if (registrar_subcom) {
         Registrar registrar;
         registrar.run();
- 
+
+        CND_INFO("Cleaning up generally unsavory bits....");
+        registrar.~Registrar();
+
         return EXIT_SUCCESS;
     }
 

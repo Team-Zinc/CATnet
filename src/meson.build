@@ -4,10 +4,12 @@ subdir('sockets')
 project_source_files = [
   'daemon.cpp',
   'registrar/registrar.cpp',
-  'participant/participant.cpp'
+  'participant/participant.cpp',
+  'participant/registrar_exchange.cpp',
+  'participant/whisker_exchange.cpp'
 ]
 
-project_dependencies = [socket_dep, cli11_dep, logging_dep]
+project_dependencies = [thread_dep, socket_dep, cli11_dep, logging_dep]
 build_args = []
 inc_dirs = [socket_inc, cli11_inc, spdlog_inc]
 
