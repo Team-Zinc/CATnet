@@ -47,3 +47,8 @@ subprojects/*/
 
 # Compile commands nessisary for intellij to work
 **/compile_commands.json
+
+# Ignore compiled google protobufs
+**/*.bp.cc
+**/*/bp.h
+
