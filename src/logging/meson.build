@@ -1,31 +1,25 @@
-project_source_files = [
+logging_source_files = [
   'log.cpp'
-
-
-
-
-
-
 ]
 
-project_dependencies = [
+logging_dependencies = [
     spdlog_dep
 ]
 
-build_args = [
+logging_build_args = [
 ]
 
-inc_dirs = [
+logging_inc_dirs = [
     spdlog_inc
 ]
 
 logging_target = static_library(
   'catnet_logging',
-  project_source_files,
-  dependencies: project_dependencies,
-  include_directories : inc_dirs,
+  logging_source_files,
+  dependencies: logging_dependencies,
+  include_directories : logging_inc_dirs,
   install : true,
-  cpp_args : build_args,
+  cpp_args : logging_build_args,
 )
 
 logging_inc = include_directories('include')

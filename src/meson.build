@@ -8,7 +8,7 @@ project_source_files = [
   'participant/participant.cpp',
   'participant/registrar_exchange.cpp',
   'participant/whisker_exchange.cpp',
-  #  head_whisker_exchange_gened
+  # head_whisker_exchange_gened
 ]
 
 project_dependencies = [thread_dep, socket_dep, cli11_dep, logging_dep] # protobuf_dep here fixes it
