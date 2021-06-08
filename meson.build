@@ -13,6 +13,13 @@ project(
 
 # Build all of our wraped dependencies first
 
+# Python3 (Wonder when Python4 will come out....)
+python3 = find_program('python3', version : '>=3.3.0', required : true)
+if not python3.found()
+  message('You need python3 with a version of at least 3.3.0 to compile this software.')
+  message('And no, we are not going to build it for you. :D')
+endif
+
 # Threading support (Support Free Trade!)
 thread_dep = dependency('threads')
 
@@ -33,6 +40,9 @@ cli11_inc = cli11_proj.get_variable('CLI11_inc')
 protobuf = find_program('protoc', required: false)
 if not protobuf.found()
   protobuf_proj = subproject('protobuf')
+  protobuf_dep = protobuf_proj.get_variable('protobuf_dep')
+else
+  protobuf_dep = dependency('protobuf', required : true)
 endif
 
 # Sockpp (I wonder if this is a pun)

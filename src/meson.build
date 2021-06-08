@@ -1,15 +1,17 @@
 subdir('logging')
 subdir('sockets')
+subdir('proto')
 
 project_source_files = [
   'daemon.cpp',
   'registrar/registrar.cpp',
   'participant/participant.cpp',
   'participant/registrar_exchange.cpp',
-  'participant/whisker_exchange.cpp'
+  'participant/whisker_exchange.cpp',
+  #  head_whisker_exchange_gened
 ]
 
-project_dependencies = [thread_dep, socket_dep, cli11_dep, logging_dep]
+project_dependencies = [thread_dep, socket_dep, cli11_dep, logging_dep] # protobuf_dep here fixes it
 build_args = []
 inc_dirs = [socket_inc, cli11_inc, spdlog_inc]
 

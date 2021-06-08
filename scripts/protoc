@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+# Tries to find a vaiable protoc
+
+# 1: location of build directory
+# 2: name of the source file being generated
+
+import sys, os, shutil, time
+
+build = sys.argv[1]
+
+def get_protoc_path():
+    protoc_path = ''
+
+    # Search on the local system first
+    for it in os.scandir(os.path.join(build, 'subprojects')):
+        if it.is_dir():
+            if it.name[:8] == "protobuf":
+                protoc_path = os.path.join(build, 'subprojects', it.name, 'protoc')
+
+
+    # No dice? Look system wide
+    if protoc_path == '':
+        protoc_path = shutil.which('protoc')
+
+    # Oh no!
+    if protoc_path == '':
+        print('WARNING: SCRIPT `protoc (wrapper)` COULD NOT FIND `protoc`!!!')
+        exit()
+
+    return protoc_path
+
+# Run it
+os.system(' '.join(sys.argv[:3]))
+
+# Move the files to the right places
+# source = sys.argv[2]
+# header = source.replace(".pb.cc", ".ph.h")
+# os.rename(source.split(os.path.sep)[len(source.split(os.path.sep))-1], os.path.join(build, source))
+
+

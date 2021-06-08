@@ -34,6 +34,8 @@ void RegistrarExchange::run() {
         return;
     }
 
+    // TODO: Move into desctructor
+    client.closeConnection();
 }
 
 void RegistrarExchange::destroy() {
