@@ -10,7 +10,7 @@ logging_build_args = [
 ]
 
 logging_inc_dirs = [
-    spdlog_inc
+  spdlog_inc
 ]
 
 logging_target = static_library(

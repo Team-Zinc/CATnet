@@ -6,7 +6,8 @@
  * MIT License
  */
 
-#pragma once
+#ifndef TCP_SOCKET_HPP
+#define TCP_SOCKET_HPP
 
 #include "socket_compat.hpp"
 
@@ -24,3 +25,5 @@ class TcpSocket : public Socket {
         bool receiveData(void *buf, size_t len);
         bool isConnected();
 };
+
+#endif /* TCP_SOCKET_HPP */
