@@ -37,13 +37,13 @@ cli11_inc = cli11_proj.get_variable('CLI11_inc')
 # As opposed to all the other required tools and such,
 # Google Protobuf takes a long time to compile. Checking
 # for existance reduces build times on clean.
-protobuf = find_program('protoc', required: false)
-if not protobuf.found()
-  protobuf_proj = subproject('protobuf')
-  protobuf_dep = protobuf_proj.get_variable('protobuf_dep')
-else
-  protobuf_dep = dependency('protobuf', required : true)
-endif
+protoc = find_program('protoc', required: true)
+# if not protobuf.found()
+#   protobuf_proj = subproject('protobuf')
+#   protobuf_dep = protobuf_proj.get_variable('protobuf_dep')
+# else
+protobuf_dep = dependency('protobuf', required : true)
+# endif
 
 # Sockpp (I wonder if this is a pun)
 # sockpp_proj = subproject('sockpp')
