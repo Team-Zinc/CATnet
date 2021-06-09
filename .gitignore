@@ -40,7 +40,7 @@ builddir/
 .vscode
 
 # Weird .cache files?
-.cache
+.cache/
 
 # Meson wrap stuff
 subprojects/*/
