@@ -25,7 +25,7 @@ Please run `catnetd --help` to get a help message. To launch the participant (ru
 ## Software Development
 ### Usefull flags
 During development of CATnet, you may wish these flags:
-* `-l0`, enables all levels of logging. Please note that in the future, this may not be available in release builds.
+* `-l0`, enables all levels of logging. Please note that *trace* and *info* logging are disabled in release builds.
 
 ### Building
 The way to build CATnet is basically the same as how a regular user would, but instead of running `meson build` you run `meson build --buildtype=debug`
