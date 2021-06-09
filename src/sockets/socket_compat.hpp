@@ -7,7 +7,8 @@
  * MIT License
  */
 
-#pragma once
+#ifndef SOCKET_COMPAT_HPP
+#define SOCKET_COMPAT_HPP
 
 // Windows
 #ifdef _WIN32
@@ -46,3 +47,5 @@ class Socket {
         void closeConnection(void);
         char* getMessage(void);
 };
+
+#endif /* SOCKET_COMPAT_HPP */

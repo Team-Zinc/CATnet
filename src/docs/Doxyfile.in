@@ -15,7 +15,7 @@ WARN_IF_UNDOCUMENTED = YES
 
 # Input files
 INPUT         = @DOXYGEN_INPUT@
-EXCLUDE       = @DOXYGEN_INPUT@/tests
+EXCLUDE       = @DOXYGEN_INPUT@/proto
 FILE_PATTERNS = *.h *.hpp *.cpp *.hpp
 RECURSIVE     = YES
 

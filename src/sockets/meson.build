@@ -1,4 +1,4 @@
-project_source_files = [
+sockets_source_files = [
     'socket_compat.cpp',
     'tcp_client_socket.cpp',
     'tcp_server_socket.cpp',
@@ -8,24 +8,24 @@ project_source_files = [
     'udp_socket.cpp'
 ]
 
-project_dependencies = [
+sockets_dependencies = [
 
 ]
 
-build_args = [
+sockets_build_args = [
 ]
 
-inc_dirs = [
+sockets_inc_dirs = [
 
 ]
 
 socket_target = static_library(
   'catnet_sockets',
-  project_source_files,
-  dependencies: project_dependencies,
-  include_directories : inc_dirs,
+  sockets_source_files,
+  dependencies: sockets_dependencies,
+  include_directories : sockets_inc_dirs,
   install : true,
-  cpp_args : build_args,
+  cpp_args : sockets_build_args,
 )
 
 socket_inc = include_directories('.')

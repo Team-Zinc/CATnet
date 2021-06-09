@@ -13,7 +13,10 @@ TcpSocket::TcpSocket(const char * host, const short port) {
     if (!initWinsock()) { return; };
 
     // Set up client address info
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wmissing-field-initializers"
     struct addrinfo hints = {0};
+#pragma GCC diagnostic pop
     hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_STREAM;
 

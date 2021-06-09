@@ -24,6 +24,7 @@ jobs:
     - uses: actions/setup-python@v1
       with:
         python-version: '3.x'
+    - run: sudo apt-get install protobuf-compiler
     - run: pip install meson ninja
     - run: meson setup builddir/
       env:
@@ -46,6 +47,7 @@ jobs:
       with:
         python-version: '3.x'
     - run: brew install gcc
+    - run: brew install protobuf
     - run: pip install meson ninja
     - run: meson setup builddir/
       env:

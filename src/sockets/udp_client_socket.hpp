@@ -6,7 +6,8 @@
  * MIT License
  */
 
-#pragma once
+#ifndef UDP_CLIENT_SOCKET_HPP
+#define UDP_CLIENT_SOCKET_HPP
 
 #include "udp_socket.hpp"
 
@@ -17,3 +18,5 @@ class UdpClientSocket : public UdpSocket {
     public:
         UdpClientSocket(const char * host, const short port, const uint32_t timeoutMsec);
 };
+
+#endif /* UDP_CLIENT_SOCKET_HPP */

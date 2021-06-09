@@ -6,7 +6,8 @@
  * MIT License
  */
 
-#pragma once
+#ifndef TCP_SERVER_SOCKET_HPP
+#define TCP_SERVER_SOCKET_HPP
 
 #include "tcp_socket.hpp"
 
@@ -19,3 +20,5 @@ class TcpServerSocket : public TcpSocket {
         TcpServerSocket(const char * host, short port);
         void acceptConnection(void);
 };
+
+#endif /* TCP_SERVER_SOCKET_HPP */

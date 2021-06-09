@@ -6,7 +6,8 @@
  * MIT License
  */
 
-#pragma once
+#ifndef UDP_SOCKET_HPP
+#define UDP_SOCKET_HPP
 
 #include "socket_compat.hpp"
 
@@ -21,3 +22,6 @@ class UdpSocket : public Socket {
         void sendData(void * buf, size_t len);
         bool receiveData(void * buf, size_t len);
 };
+
+#endif /* UDP_SOCKET_HPP */
+
