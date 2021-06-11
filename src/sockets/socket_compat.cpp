@@ -1,4 +1,4 @@
-#include "socket_compat.hpp"
+#include <socket_compat.hpp>
 
 bool Socket::initWinsock(void) {
 #ifdef _WIN32

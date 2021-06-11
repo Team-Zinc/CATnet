@@ -28,4 +28,3 @@ logging_dep = declare_dependency(
   link_with : logging_target
 )
 
-subdir('docs')

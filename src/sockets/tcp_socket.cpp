@@ -1,5 +1,10 @@
-#include "tcp_socket.hpp"
+#include <tcp_socket.hpp>
 
+#include <vector>
+
+#include <log.hpp>
+
+/// Creates a TCP socket.
 TcpSocket::TcpSocket(const char * host, const short port) {
     sprintf_s(_host, "%s", host);
     sprintf_s(_port, "%d", port);
@@ -38,17 +43,17 @@ TcpSocket::TcpSocket(const char * host, const short port) {
     }
 }
 
-
-bool TcpSocket::sendData(void *buf, size_t len) {
-    return (size_t)send(_conn, (const char *)buf, len, 0) == len;
+/// \brief Send data along the current socket. Returns true if the message is done.
+bool TcpSocket::sendData(std::vector<unsigned char>* buf) {
+    return (size_t)send(_conn, &(*buf)[0], buf->size(), 0) <= buf->size();
 }
 
-
-bool TcpSocket::receiveData(void *buf, size_t len) {
-    return (size_t)recv(_conn, (char *)buf, len, 0) == len;
+/// \brief Receive data from the current socket. Returns true if the message is done.
+bool TcpSocket::receiveData(std::vector<unsigned char>* buf) {
+    return (size_t)recv(_conn, &(*buf)[0], buf->size(), 0) <= buf->size();
 }
 
-
+/// \brief Are we connected?
 bool TcpSocket::isConnected() {
     return _connected;
 }

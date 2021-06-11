@@ -23,13 +23,13 @@ private:
 };
 
 // Head log macros
-#ifdef NDEBUG // Don't include trace and info logging in anything not debug.
+// #ifdef NDEBUG // Don't include trace and info logging in anything not debug.
 #define CND_TRACE(...)    ::Log::GetDaemonLogger()->trace(__VA_ARGS__)
 #define CND_INFO(...)     ::Log::GetDaemonLogger()->info(__VA_ARGS__)
-#else
-#define CND_TRACE(...)
-#define CND_INFO(...)
-#endif
+// #else
+// #define CND_TRACE(...)
+// #define CND_INFO(...)
+// #endif
 #define CND_WARN(...)     ::Log::GetDaemonLogger()->warn(__VA_ARGS__)
 #define CND_ERROR(...)    ::Log::GetDaemonLogger()->error(__VA_ARGS__)
 #define CND_CRITICAL(...) ::Log::GetDaemonLogger()->critical(__VA_ARGS__)

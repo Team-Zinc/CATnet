@@ -9,16 +9,18 @@ sockets_source_files = [
 ]
 
 sockets_dependencies = [
-
+  logging_dep
 ]
 
 sockets_build_args = [
 ]
 
 sockets_inc_dirs = [
-
+  spdlog_inc
 ]
 
+socket_inc = include_directories('include')
+sockets_inc_dirs += socket_inc
 socket_target = static_library(
   'catnet_sockets',
   sockets_source_files,
@@ -28,7 +30,6 @@ socket_target = static_library(
   cpp_args : sockets_build_args,
 )
 
-socket_inc = include_directories('.')
 socket_dep = declare_dependency(
   include_directories: socket_inc,
   link_with : socket_target

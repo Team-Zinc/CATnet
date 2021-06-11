@@ -10,8 +10,8 @@ project(
     'warning_level=3', # Enable some good warnings
     'c_std=c17', # Require the C17 standard.
     'cpp_std=c++17', # Require the C++17 standard.
-    'fortran_std=f2018', # For computationally intensive work
-    'werror=true' # We hate bugs. TODO: Disable this on release builds
+    'cpp_args-I=@BUILD_ROOT@/src/catnetd.p', # Include generated protobuf header.
+    'fortran_std=f2018' # For computationally intensive work
   ]
 )
 
@@ -22,6 +22,14 @@ python3 = find_program('python3', version : '>=3.3.0', required : true)
 if not python3.found()
   message('You need python3 installed with a version of at least 3.3.0 to compile this software.')
   message('And no, we are not going to build it for you. :D')
+endif
+
+# Doxygen (Not, I repeat, NOT a replacement for oxygen. We don't need to lose another.)
+doxygen = find_program('doxygen', required : false)
+if not doxygen.found()
+  message('Please keep in mind that you do not have Doxygen installed. This means that *whatever*')
+  message('you choose (to generate documentation or not too), will be IGNORED. As such, no documentation')
+  message('will be generated.')
 endif
 
 # TODO: Make it so we could build Google ProtoBuf if not found
