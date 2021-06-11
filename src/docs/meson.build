@@ -1,4 +1,3 @@
-doxygen = find_program('doxygen', required: false)
 if get_option('enable-docs') and doxygen.found()
   conf_data = configuration_data()
   conf_data.set('DOXYGEN_INPUT', meson.current_source_dir() + '/../')

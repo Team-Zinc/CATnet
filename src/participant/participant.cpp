@@ -1,15 +1,17 @@
 #include "participant.hpp"
 
-#include "../logging/include/log.hpp"
+#include <log.hpp>
+
 #include "whisker_exchange.hpp"
 #include "registrar_exchange.hpp"
 
 Participant::Participant() {
-    m_RegistrarExchangeThread = std::thread(RegistrarExchange::run);
-    m_WhiskerExchangeThread = std::thread(WhiskerExchange::run);
+    m_RegistrarExchangeThread = std::thread(&RegistrarExchange::run); // Participant Registrar exchange thread
+    m_WhiskerExchangeThread = std::thread(&WhiskerExchange::run); // Participant Whisker exchange thread
 
-    RegistrarExchange::init();
-    WhiskerExchange::init();
+    // Constructors (for right now) should be run inside the run methods.
+    // RegistrarExchange::init();
+    // WhiskerExchange::init();
 }
 
 void Participant::run() {

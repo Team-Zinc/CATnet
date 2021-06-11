@@ -4,17 +4,18 @@ subdir('proto')
 
 project_source_files = [
   'daemon.cpp',
-  'registrar/registrar.cpp',
+  'participant/message.cpp',
   'participant/participant.cpp',
   'participant/registrar_exchange.cpp',
   'participant/whisker_exchange.cpp',
+  'registrar/registrar.cpp',
   head_whisker_exchange_gened
 ]
 
 project_dependencies = [thread_dep, socket_dep, cli11_dep, logging_dep, protobuf_dep] # protobuf_dep here fixes it
 build_args = [
 ]
-inc_dirs = [cli11_inc, spdlog_inc, socket_inc]
+inc_dirs = [cli11_inc, spdlog_inc, logging_inc, socket_inc]
 
 project_target = executable(
   'catnetd',

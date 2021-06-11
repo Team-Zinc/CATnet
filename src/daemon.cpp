@@ -1,9 +1,13 @@
+#ifdef _WIN32
+#error Please note that CATNET is not ready for Windows. This is because we do not have a testing machine. // TODO: Add windows support
+#endif /* _WIN32 */
+
 #include <iostream>
-#include <cstdlib>
 
 #include <CLI/CLI.hpp>
 
-#include "logging/include/log.hpp"
+#include <head_whisker_exchange.pb.h>
+#include <log.hpp>
 #include "participant/participant.hpp"
 #include "registrar/registrar.hpp"
 
@@ -13,6 +17,9 @@ int main(int argc, char *argv[]) {
         std::cerr << "Please use the -h (--help) flag to get the usage." << std::endl;
         return EXIT_FAILURE;
     }
+
+    // Check if we have the right Google ProtoBuf version
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
 
     // Construct the application
     CLI::App app{"CATnet Daemon (github.com/ZincSoft/CATnet)"};
@@ -33,6 +40,8 @@ int main(int argc, char *argv[]) {
     try {
         app.parse(argc, argv);
     } catch (const CLI::ParseError& e) {
+        google::protobuf::ShutdownProtobufLibrary();
+
         return app.exit(e);
     }
 
@@ -48,6 +57,7 @@ int main(int argc, char *argv[]) {
 
         CND_INFO("Cleaning up generally unsavory bits....");
         participant.~Participant();
+        google::protobuf::ShutdownProtobufLibrary();
 
         return EXIT_SUCCESS;
     } else if (registrar_subcom) {
@@ -56,12 +66,15 @@ int main(int argc, char *argv[]) {
 
         CND_INFO("Cleaning up generally unsavory bits....");
         registrar.~Registrar();
+        google::protobuf::ShutdownProtobufLibrary();
 
         return EXIT_SUCCESS;
     }
 
     // This should only be called if no subcommands are called (see above).
     std::cerr << "Unknown subcommand. Please use the -h (--help) flag to get the usage." << std::endl;
+    
+    google::protobuf::ShutdownProtobufLibrary();
 
     return EXIT_FAILURE;
 }

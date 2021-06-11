@@ -1,37 +1,41 @@
 import socket
 import sys
+import os
+import signal
+
+global sock
+
+def handler(signum, frame):
+    sock.close()
 
 # Create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Bind the socket to the port
 server_address = ('localhost', 30003)
-print >>sys.stderr, 'starting up on %s port %s' % server_address
-sock.bind(server_address)
+print('starting up on %s port %s' % server_address)
+
+try:
+    sock.bind(server_address)
+except:
+    print('failed to bind socket')
+    handler(0, 0)
+    exit()
 
 # Listen for incoming connections
 sock.listen(1)
 
-while True:
-    # Wait for a connection
-    print >>sys.stderr, 'waiting for a connection'
-    connection, client_address = sock.accept()
+try:
+    while 1:
+        newSocket, address = sock.accept()
+        # loop serving the new client
+        while 1:
+            receivedData = newSocket.recv(1024)
+            if not receivedData: break
+            # Echo back the same data you just received
+            print(str(address) + " : " + str(receivedData))
 
-    try:
-        print >>sys.stderr, 'connection from', client_address
-
-        # Receive the data in small chunks and retransmit it
-        while True:
-            data = 'I\'m rich, and now I\'m sad.'
-            print >>sys.stderr, 'received "%s"' % data
-            if data:
-                print >>sys.stderr, 'sending data back to the client'
-                connection.sendall(data)
-            else:
-                print >>sys.stderr, 'no more data from', client_address
-                break
-            
-    finally:
-        # Clean up the connection
-        connection.close()
+        newSocket.close()
+finally:
+    sock.close()
 

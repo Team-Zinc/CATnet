@@ -1,9 +1,14 @@
 syntax = "proto3";
  
-package HeadAndWhiskerExchange;
+package head_whisker_exchange;
  
 message Message {
-    int32 command = 1;
+    enum Command {
+        NONE = 0;
+        TEST_CONNECTION = 1;
+    }
+
+    Command command = 1;
     repeated string args = 2;
  
     string response = 3;
