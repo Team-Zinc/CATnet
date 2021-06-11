@@ -1,4 +1,8 @@
 # CATnet
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat)]()  
+[![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars&style=plastic)]()
+[![GitHub watchers](https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch&style=plastic)]()
+[![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork&style=plastic)]()  
 CATnet is a more desentralized web for a more modern age.
 
 ## User use
@@ -6,6 +10,8 @@ CATnet is a more desentralized web for a more modern age.
 CATnet uses the Meson build system, because quite simply, it is one of the best build systems for C++. But you're not here to find out why Meson is so awesome, you just want to build CATnet. To build CATnet, you must have Meson and Ninja installed on your system.  
 If on Linux, just install your distros meson package, and ninja will be installed along side it. Same on Mac OS. On Windows, winget doesn't have a package for it. Please look up installation directions for Meson and Ninja on Windows. Or throw your Windows cursed hard drive in a bin. Either works.  
 As of now, you do not need any libraries preinstalled because the C/C++ standard libraries (duh). However, since Google ProtoBuf takes a while to build, you can download a prebuilt binary from your package manager to speed up the build (the build scripts try to automatically detect it). The following is how to build CATnet.  
+![Install GIF](install.gif)
+or
 ```bash
 # Clone the repo if you haven't already
 git clone https://github.com/ZincSoft/CATNET.git
@@ -41,4 +47,18 @@ The first time you use a feature (even if it is trivial, such as function declar
 Pretend the other people working on this code base are insane, have a shotgun, and know where you live. As such, please follow `WORKFLOW.MD`.
 
 ### Specification
-[Here](https://docs.google.com/document/d/1t3FXJTDr-h4J9iPvzBLDdCKGJAukKruhrJjNaMWRgq0/edit?ts=5fc41d5f#heading=h.3bqhl2hpdgyy) is a link to our specifications document (Alpha).
+[Here](https://docs.google.com/document/d/1t3FXJTDr-h4J9iPvzBLDdCKGJAukKruhrJjNaMWRgq0/edit?ts=5fc41d5f#heading=h.3bqhl2hpdgyy) is a link to our specifications document.
+
+### Contributing
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
+[![GitHub commit activity the past week, 4 weeks](https://img.shields.io/github/commit-activity/y/eslint/eslint.svg?style=flat)]()
+[![GitHub commits since](https://img.shields.io/github/commits-since/tterb/playmusic/v1.2.0.svg)]()
+[![Issues](https://img.shields.io/github/issues-raw/tterb/PlayMusic.svg?maxAge=25000)](https://github.com/tterb/Hyde/issues)  
+[![Pull Requests](https://img.shields.io/github/issues-pr/cdnjs/cdnjs.svg?style=flat)]()
+[![PR's Welcome :D](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)  
+Thank you for even considering contributing to this project. At this time, we will *NOT* be merging pull requests that are linked to issues that themselves are linked to a certain project. We are, however, eternally greatfull for bug fixes.
+
+## Support
+### Discord
+[![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.gg/YAqvVTrx)  
+We have an offical discord server! Please note that it is not ready, but you can still use it nonetheless.
