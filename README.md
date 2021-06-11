@@ -1,17 +1,17 @@
 # CATnet
 <p align="center">
-  <a href="github.com/ZincSoft/CATNET" target="blank"><img src="https://raw.githubusercontent.com/IsaccBarker/CATNET/add-logo/assets/logo.png" alt="CATNET Logo" /></a>
-    <img src="https://img.shields.io/github/license/ZincSoft/CATNET?:ZincSoft:/CATNET?label=License&style=flat">
-    <img src="https://img.shields.io/github/stars/ZincSoft/CATNET?:ZincSoft:/CATNET?label=Stars&tyle=flat">
-    <img src="https://img.shields.io/github/watchers/ZincSoft/CATNET?style=social&label=Watch&style=flat">
-    <img src="https://img.shields.io/github/forks/ZincSoft/CATNET?style=social&label=Forks&style=flat">
-    <img src="https://img.shields.io/codefactor/grade/github/ZincSoft/CATNET?label=Code%20Factor%20Grade">
-    <img src="https://img.shields.io/tokei/lines/github/ZincSoft/CATNET?label=Total Lines">
-    <img src="https://img.shields.io/badge/Linux-Supported-green">
-    <img src="https://img.shields.io/badge/MacOS-Supported-green">
-	<img src="https://img.shields.io/badge/Windows-Nope.%20Use%20Linux-red">
-    <img src="https://img.shields.io/github/last-commit/ZincSoft/Catnet.svg">
-    <img src="https://img.shields.io/aur/last-modified/Catnet.svg">
+  <a href="github.com/ZincSoft/CATNET" target="blank"><img src="assets/logo.png" alt="CATNET Logo" /></a>
+    <img src="https://img.shields.io/github/license/ZincSoft/CATNET?:ZincSoft:/CATNET?label=License&style=flat" alt="License">
+    <img src="https://img.shields.io/github/stars/ZincSoft/CATNET?:ZincSoft:/CATNET?label=Stars&tyle=flat" alt="Stars">
+    <img src="https://img.shields.io/github/watchers/ZincSoft/CATNET?style=social&label=Watchers&style=flat" alt="Watchers">
+    <img src="https://img.shields.io/github/forks/ZincSoft/CATNET?style=social&label=Forks&style=flat" alt = "Forks">
+    <img src="https://img.shields.io/codefactor/grade/github/ZincSoft/CATNET?label=Code%20Factor%20Grade" alt="Code Factor Grade">
+    <img src="https://img.shields.io/tokei/lines/github/ZincSoft/CATNET?label=Total Lines" alt="Total Lines">
+    <img src="https://img.shields.io/badge/Linux-Supported-green" alt="Linux Supported!">
+    <img src="https://img.shields.io/badge/MacOS-Supported-green" alt="MacOS Supported!">
+	<img src="https://img.shields.io/badge/Windows-Nope.%20Use%20Linux-red" alt="Fuck Windows!">
+    <img src="https://img.shields.io/github/last-commit/ZincSoft/Catnet.svg" alt="Last Commit">
+    <img src="https://img.shields.io/aur/last-modified/Catnet.svg" alt="AUR Last Modified">
 </p>
 CATnet is a more desentralized web for a more modern age.
 
