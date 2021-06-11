@@ -10,7 +10,7 @@ CATnet is a more desentralized web for a more modern age.
 CATnet uses the Meson build system, because quite simply, it is one of the best build systems for C++. But you're not here to find out why Meson is so awesome, you just want to build CATnet. To build CATnet, you must have Meson and Ninja installed on your system.  
 If on Linux, just install your distros meson package, and ninja will be installed along side it. Same on Mac OS. On Windows, winget doesn't have a package for it. Please look up installation directions for Meson and Ninja on Windows. Or throw your Windows cursed hard drive in a bin. Either works.  
 As of now, you do not need any libraries preinstalled because the C/C++ standard libraries (duh). However, since Google ProtoBuf takes a while to build, you can download a prebuilt binary from your package manager to speed up the build (the build scripts try to automatically detect it). The following is how to build CATnet.  
-[![Install GIF](https://asciinema.org/a/9iKEPsEhVYxF6T4i2B0EIyZEY.svg)](https://asciinema.org/a/9iKEPsEhVYxF6T4i2B0EIyZEY)  
+<script id="asciicast-9iKEPsEhVYxF6T4i2B0EIyZEY" src="https://asciinema.org/a/9iKEPsEhVYxF6T4i2B0EIyZEY.js" async></script>
 or
 ```bash
 # Clone the repo if you haven't already
