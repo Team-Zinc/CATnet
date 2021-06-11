@@ -51,11 +51,12 @@ int main(int argc, char *argv[]) {
     // Call the correct code based on what subcommand is given.
     // Please note that once the participant/registrar clases
     // go out of scope, their destructor will be called.
+    CND_DAEMON_DEBUG("Staring....");
     if (participant_subcom) {
         Participant participant;
         participant.run();
 
-        CND_INFO("Cleaning up generally unsavory bits....");
+        CND_DAEMON_DEBUG("Cleaning up generally unsavory bits....");
         participant.~Participant();
         google::protobuf::ShutdownProtobufLibrary();
 
@@ -64,7 +65,7 @@ int main(int argc, char *argv[]) {
         Registrar registrar;
         registrar.run();
 
-        CND_INFO("Cleaning up generally unsavory bits....");
+        CND_DAEMON_DEBUG("Cleaning up generally unsavory bits....");
         registrar.~Registrar();
         google::protobuf::ShutdownProtobufLibrary();
 
