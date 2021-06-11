@@ -1,10 +1,17 @@
 # CATnet
 <p align="center">
-  <a href="github.com/ZincSoft/CATNET" target="blank"><img src="assets/logo.png" height="250" width="1461" alt="CATNET Logo" /></a>
-  <img src="https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat">
-  <img src="https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars&style=plastic">
-  <img src="https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch&style=plastic">
-  <img src="https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork&style=plastic">
+  <a href="github.com/ZincSoft/CATNET" target="blank"><img src="https://raw.githubusercontent.com/IsaccBarker/CATNET/add-logo/assets/logo.png" alt="CATNET Logo" /></a>
+    <img src="https://img.shields.io/github/license/ZincSoft/CATNET?:ZincSoft:/CATNET?label=License&style=flat">
+    <img src="https://img.shields.io/github/stars/ZincSoft/CATNET?:ZincSoft:/CATNET?label=Stars&tyle=flat">
+    <img src="https://img.shields.io/github/watchers/ZincSoft/CATNET?style=social&label=Watch&style=flat">
+    <img src="https://img.shields.io/github/forks/ZincSoft/CATNET?style=social&label=Forks&style=flat">
+    <img src="https://img.shields.io/codefactor/grade/github/ZincSoft/CATNET?label=Code%20Factor%20Grade">
+    <img src="https://img.shields.io/tokei/lines/github/ZincSoft/CATNET?label=Total Lines">
+    <img src="https://img.shields.io/badge/Linux-Supported-green">
+    <img src="https://img.shields.io/badge/MacOS-Supported-green">
+	<img src="https://img.shields.io/badge/Windows-Nope.%20Use%20Linux-red">
+    <img src="https://img.shields.io/github/last-commit/ZincSoft/Catnet.svg">
+    <img src="https://img.shields.io/aur/last-modified/Catnet.svg">
 </p>
 CATnet is a more desentralized web for a more modern age.
 
@@ -63,5 +70,5 @@ Thank you for even considering contributing to this project. At this time, we wi
 
 ## Support
 ### Discord
-[![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.gg/YAqvVTrx)  
+[![Discord Chat](https://img.shields.io/discord/YAqvVTrx.svg)](https://discord.gg/YAqvVTrx)  
 We have an offical discord server! Please note that it is not ready, but you can still use it nonetheless.
