@@ -30,6 +30,9 @@ During development of CATnet, you may wish these flags:
 ### Building
 The way to build CATnet is basically the same as how a regular user would, but instead of running `meson build` you run `meson build --buildtype=debug`
 
+### Logging
+Please see `src/logging/include/log.hpp` to see the macros availble. Please choose the right one.
+
 ### Code Guidelines
 In order to make CATnet easier to maintain and understand, we follow the [CppCoreGuidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines). If you need to find out how to style a specific C++ feature, please use your browsers built in search function, or clone it onto your system and `find . | grep x`.
 The first time you use a feature (even if it is trivial, such as function declaration), please look up the prefered way to use it in the guidelines.
