@@ -1,11 +1,9 @@
 # CATnet
-<p align="center">
 [![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat)]()  
 [![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars&style=plastic)]()
 [![GitHub watchers](https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch&style=plastic)]()
 [![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork&style=plastic)]()
 CATnet is a more desentralized web for a more modern age.
-</p>
 
 ## User use
 ### Installation
@@ -34,9 +32,7 @@ During development of CATnet, you may wish these flags:
 * `-l0`, enables all levels of logging. Please note that *trace* and *info* logging are disabled in release builds.
 
 ### Building
-<p align="center">
 [![Build Workflow](https://github.com/github/docs/actions/workflows/build.yml/badge.svg)]()
-</p>
 The way to build CATnet is basically the same as how a regular user would, but instead of running `meson build` you run `meson build --buildtype=debug`
 
 ### Logging
@@ -53,18 +49,14 @@ Pretend the other people working on this code base are insane, have a shotgun, a
 [Here](https://docs.google.com/document/d/1t3FXJTDr-h4J9iPvzBLDdCKGJAukKruhrJjNaMWRgq0/edit?ts=5fc41d5f#heading=h.3bqhl2hpdgyy) is a link to our specifications document.
 
 ### Contributing
-<p align="center">
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
 [![GitHub commit activity the past week, 4 weeks](https://img.shields.io/github/commit-activity/y/eslint/eslint.svg?style=flat)]() [![GitHub commits since](https://img.shields.io/github/commits-since/tterb/playmusic/v1.2.0.svg)]()  
 [![Issues](https://img.shields.io/github/issues-raw/tterb/PlayMusic.svg?maxAge=25000)](https://github.com/tterb/Hyde/issues)  
 [![Pull Requests](https://img.shields.io/github/issues-pr/cdnjs/cdnjs.svg?style=flat)]()
 [![PR's Welcome :D](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-</p>
 Thank you for even considering contributing to this project. At this time, we will *NOT* be merging pull requests that are linked to issues that themselves are linked to a certain project. We are, however, eternally greatfull for bug fixes.
 
 ## Support
 ### Discord
-<p align="center">
 [![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.gg/YAqvVTrx)  
-</p>
 We have an offical discord server! Please note that it is not ready, but you can still use it nonetheless.
