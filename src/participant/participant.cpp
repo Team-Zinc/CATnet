@@ -18,7 +18,7 @@ void Participant::run() {
     // We need to start a thread to communicate with the registrar,
     // and to forward/send/receive packets from other whiskers.
 
-    CND_INFO("Starting registrar and whisker communication based exchange threads....");
+    CND_PARTICIPANT_RE_DEBUG("Starting registrar and whisker communication based exchange threads....");
     m_RegistrarExchangeThread.join();
     m_WhiskerExchangeThread.join();
 }
