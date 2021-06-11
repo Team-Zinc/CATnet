@@ -1,8 +1,11 @@
 # CATnet
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat)]()  
-[![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars&style=plastic)]()
-[![GitHub watchers](https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch&style=plastic)]()
-[![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork&style=plastic)]()  
+<p align="center">
+  <a href="github.com/ZincSoft/CATNET" target="blank"><img src="assets/logo.png" height="250" width="1461" alt="CATNET Logo" /></a>
+  <img src="https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat">
+  <img src="https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars&style=plastic">
+  <img src="https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch&style=plastic">
+  <img src="https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork&style=plastic">
+</p>
 CATnet is a more desentralized web for a more modern age.
 
 ## User use
