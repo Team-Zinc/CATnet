@@ -6,10 +6,9 @@
     <img src="https://img.shields.io/github/watchers/ZincSoft/CATNET?style=social&label=Watchers&style=flat" alt="Watchers">
     <img src="https://img.shields.io/github/forks/ZincSoft/CATNET?style=social&label=Forks&style=flat" alt = "Forks">
     <img src="https://img.shields.io/codefactor/grade/github/ZincSoft/CATNET?label=Code%20Factor%20Grade" alt="Code Factor Grade">
-    <img src="https://img.shields.io/tokei/lines/github/ZincSoft/CATNET?label=Total Lines" alt="Total Lines">
     <img src="https://img.shields.io/badge/Linux-Supported-green" alt="Linux Supported!">
     <img src="https://img.shields.io/badge/MacOS-Supported-green" alt="MacOS Supported!">
-	<img src="https://img.shields.io/badge/Windows-Nope.%20Use%20Linux-red" alt="Fuck Windows!">
+	<img src="https://img.shields.io/badge/Windows-Nope.%20Support%20Planned-red" alt="Fuck Windows!">
     <img src="https://img.shields.io/github/last-commit/ZincSoft/Catnet.svg" alt="Last Commit">
     <img src="https://img.shields.io/aur/last-modified/Catnet.svg" alt="AUR Last Modified">
 </p>
