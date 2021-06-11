@@ -3,6 +3,7 @@
 
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/basic_file_sink.h>
+#include <unordered_map>
 #include <vector>
 
 void Log::Init(spdlog::level::level_enum level) {
@@ -30,7 +31,7 @@ void Log::Init(spdlog::level::level_enum level) {
     }
 }
 
-std::map<std::string, spdlog::level::level_enum> Log::GetStrEnumConversionMap() {
+std::unordered_map<std::string, spdlog::level::level_enum> Log::GetStrEnumConversionMap() {
     return {{"trace", spdlog::level::level_enum::trace},
         {"debug", spdlog::level::level_enum::debug},
         {"info", spdlog::level::level_enum::info},
