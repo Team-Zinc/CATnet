@@ -1,6 +1,6 @@
 # CATnet
 <p align="center">
-  <a href="github.com/ZincSoft/CATNET" target="blank"><img src="https://raw.githubusercontent.com/IsaccBarker/CATNET/add-logo/assets/logo.png" alt="CATNET Logo" /></a>
+  <a href="github.com/ZincSoft/CATNET" target="blank"><img src="assets/logo.png" alt="CATNET Logo" /></a>
     <img src="https://img.shields.io/github/license/ZincSoft/CATNET?:ZincSoft:/CATNET?label=License&style=flat">
     <img src="https://img.shields.io/github/stars/ZincSoft/CATNET?:ZincSoft:/CATNET?label=Stars&tyle=flat">
     <img src="https://img.shields.io/github/watchers/ZincSoft/CATNET?style=social&label=Watch&style=flat">
