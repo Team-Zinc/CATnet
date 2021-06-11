@@ -2,7 +2,6 @@
 #define LOG_HPP
 
 #include <memory>
-#include <map>
 #include <unordered_map>
 
 #include <spdlog/spdlog.h>
@@ -25,7 +24,7 @@ public:
 	/// \brief A getter function for the daemon logger.
 	static std::shared_ptr<spdlog::logger>& GetLogger(Logger logger) { return s_Loggers.at(logger); }
 
-    static std::map<std::string, spdlog::level::level_enum> GetStrEnumConversionMap();
+    static std::unordered_map<std::string, spdlog::level::level_enum> GetStrEnumConversionMap();
 private:
     inline static std::unordered_map<Logger, std::shared_ptr<spdlog::logger>> s_Loggers;
 };
