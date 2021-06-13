@@ -59,15 +59,11 @@ Pretend the other people working on this code base are insane, have a shotgun, a
 [Here](https://docs.google.com/document/d/1t3FXJTDr-h4J9iPvzBLDdCKGJAukKruhrJjNaMWRgq0/edit?ts=5fc41d5f#heading=h.3bqhl2hpdgyy) is a link to our specifications document.
 
 ### Contributing
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
-[![GitHub commit activity the past week, 4 weeks](https://img.shields.io/github/commit-activity/y/eslint/eslint.svg?style=flat)]()
-[![GitHub commits since](https://img.shields.io/github/commits-since/tterb/playmusic/v1.2.0.svg)]()
-[![Issues](https://img.shields.io/github/issues-raw/tterb/PlayMusic.svg?maxAge=25000)](https://github.com/tterb/Hyde/issues)  
-[![Pull Requests](https://img.shields.io/github/issues-pr/cdnjs/cdnjs.svg?style=flat)]()
+[![GitHub last commit](https://img.shields.io/github/last-commit/zincsoft/catnet.svg?style=flat)]()
+[![GitHub commit activity the past week, 4 weeks](https://img.shields.io/github/commit-activity/y/zincsoft/catnet.svg?style=flat)]()
+[![GitHub commits since](https://img.shields.io/github/commits-since/zincsoft/catnet/v1.2.0.svg)]()
+[![Issues](https://img.shields.io/github/issues-raw/tterb/PlayMusic.svg?maxAge=25000)](https://github.com/zincsoft/catnet/issues)  
+[![Pull Requests](https://img.shields.io/github/issues-pr/zincsoft/catnet.svg?style=flat)]()
 [![PR's Welcome :D](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)  
 Thank you for even considering contributing to this project. At this time, we will *NOT* be merging pull requests that are linked to issues that themselves are linked to a certain project. We are, however, eternally greatfull for bug fixes.
 
-## Support
-### Discord
-[![Discord Chat](https://img.shields.io/discord/YAqvVTrx.svg)](https://discord.gg/YAqvVTrx)  
-We have an offical discord server! Please note that it is not ready, but you can still use it nonetheless.
