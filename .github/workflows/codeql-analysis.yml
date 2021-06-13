@@ -13,12 +13,21 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ main ]
+    paths:
+      - "**.c"
+      - "**.h"
+      - "**.cpp"
+      - "**.hpp"
+      - "**.meson"
   pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ main ]
+    paths:
+      - "**.c"
+      - "**.h"
+      - "**.cpp"
+      - "**.hpp"
+      - "**.meson"
   schedule:
-    - cron: '22 12 * * 2'
+    - cron: '0 0 * * 1,5'
 
 jobs:
   analyze:

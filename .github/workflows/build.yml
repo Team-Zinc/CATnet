@@ -7,12 +7,14 @@ on:
       - "**.h"
       - "**.cpp"
       - "**.hpp"
+      - "**.meson"
   pull_request:
     paths:
       - "**.c"
       - "**.h"
       - "**.cpp"
       - "**.hpp"
+      - "**.meson"
 
 jobs:
   linux:
