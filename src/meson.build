@@ -19,6 +19,7 @@ inc_dirs = [cli11_inc, spdlog_inc, logging_inc, socket_inc]
 project_target = executable(
   'catnetd',
   project_source_files,
+  cpp_pch : 'pch/pch.hpp',
   dependencies : project_dependencies,
   include_directories : inc_dirs,
   install : true,
