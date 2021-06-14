@@ -7,7 +7,7 @@
 #include <head_whisker_exchange.pb.h>
 #include <log.hpp>
 
-#include "message.hpp"
+#include <message.hpp>
 
 using namespace head_whisker_exchange;
 

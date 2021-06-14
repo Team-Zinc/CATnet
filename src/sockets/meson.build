@@ -1,11 +1,13 @@
 sockets_source_files = [
+    'message.cpp',
     'socket_compat.cpp',
     'tcp_client_socket.cpp',
     'tcp_server_socket.cpp',
     'tcp_socket.cpp',
     'udp_client_socket.cpp',
     'udp_server_socket.cpp',
-    'udp_socket.cpp'
+    'udp_socket.cpp',
+    head_whisker_exchange_gened
 ]
 
 sockets_dependencies = [
