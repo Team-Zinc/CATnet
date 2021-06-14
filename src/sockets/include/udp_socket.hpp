@@ -11,6 +11,8 @@
 
 #include "socket_compat.hpp"
 
+#include <vector>
+
 class UdpSocket : public Socket {
     protected:
         struct sockaddr_in _si_other;
@@ -19,8 +21,8 @@ class UdpSocket : public Socket {
         void setupTimeout(uint32_t msec);
 
     public:
-        void sendData(void * buf, size_t len);
-        bool receiveData(void * buf, size_t len);
+        void sendData(std::vector<unsigned char>*);
+        bool receiveData(std::vector<unsigned char>*);
 };
 
 #endif /* UDP_SOCKET_HPP */
