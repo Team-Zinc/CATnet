@@ -1,10 +1,9 @@
 subdir('logging')
-subdir('sockets')
 subdir('proto')
+subdir('sockets')
 
 project_source_files = [
   'daemon.cpp',
-  'participant/message.cpp',
   'participant/participant.cpp',
   'participant/registrar_exchange.cpp',
   'participant/whisker_exchange.cpp',
