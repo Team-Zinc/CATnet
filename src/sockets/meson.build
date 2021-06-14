@@ -26,6 +26,7 @@ sockets_inc_dirs += socket_inc
 socket_target = static_library(
   'catnet_sockets',
   sockets_source_files,
+  cpp_pch : meson.source_root() + '/src/pch/pch.hpp',
   dependencies: sockets_dependencies,
   include_directories : sockets_inc_dirs,
   install : true,

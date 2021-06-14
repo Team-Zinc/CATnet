@@ -2,8 +2,6 @@
 #error Please note that CATNET is not ready for Windows. This is because we do not have a testing machine. // TODO: Add windows support
 #endif /* _WIN32 */
 
-#include <iostream>
-
 #include <CLI/CLI.hpp>
 
 #include <head_whisker_exchange.pb.h>
