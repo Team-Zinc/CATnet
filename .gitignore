@@ -42,6 +42,10 @@ builddir/
 # Weird .cache files?
 .cache/
 
+# Compilation database
+compile_commands.json
+**/compile_commands.json
+
 # Meson wrap stuff
 subprojects/*/
 

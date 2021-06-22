@@ -9,8 +9,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - run: sudo apt-get install protobuf-compiler
+    - run: pip install meson ninja
+    - run: meson setup build/
+      env:
+        CC: gcc
 
-    # Optionally generate compile_commands.json
+    - run: bash gen_comp_db.sh
 
     - uses: ZedThree/clang-tidy-review@v0.6.0
       id: review
