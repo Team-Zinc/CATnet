@@ -18,7 +18,6 @@ CATnet is a more desentralized web for a more modern age.
 ### Cloning
 Either download a .tar.gz/.zip from the green *download* button above, or clone via git:
 ![Cloning](assets/cloning.png)
-or
 ```bash
 git clone https://github.com/ZincSoft/CATNET.git
 ```
@@ -27,9 +26,8 @@ CATnet uses the Meson build system, because quite simply, it is one of the best 
 If on Linux, just install your distros meson package, and ninja will be installed along side it. Same on Mac OS. On Windows, winget doesn't have a package for it. Please look up installation directions for Meson and Ninja on Windows. Or throw your Windows cursed hard drive in a bin. Either works.  
 As of now, you do not need any libraries preinstalled because the C/C++ standard libraries (duh). However, since Google ProtoBuf takes a while to build, you can download a prebuilt binary from your package manager to speed up the build (the build scripts try to automatically detect it). The following is how to build CATnet.  
 ![Building](assets/build.png)
-or
 ```bash
-meson build
+meson build --buildtype=release
 cd build
 ninja
 ```
@@ -38,7 +36,6 @@ ninja
 #### Participant
 Look at the help menu, then run with the flags/arguments you want!
 ![Participant](assets/participant.png)
-or
 ```bash
 catnetd participant --help
 ```
