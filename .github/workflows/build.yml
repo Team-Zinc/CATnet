@@ -31,8 +31,8 @@ jobs:
     - run: meson setup builddir/
       env:
         CC: gcc
-    - run: meson build -C builddir/ -v 
-    - run: ninja -C builddir 
+    - run: meson build -C builddir/ -v
+    - run: ninja -C builddir
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
