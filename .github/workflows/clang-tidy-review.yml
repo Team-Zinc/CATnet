@@ -1,7 +1,23 @@
 name: clang-tidy-review
 
 # You can be more specific, but it currently only works on pull requests
-on: [pull_request]
+on:
+  push:
+    paths:
+      - "**.c"
+      - "**.h"
+      - "**.cpp"
+      - "**.hpp"
+      - "**.meson"
+  pull_request:
+    paths:
+      - "**.c"
+      - "**.h"
+      - "**.cpp"
+      - "**.hpp"
+      - "**.meson"
+  schedule:
+    - cron: '0 0 * * 1,5'
 
 jobs:
   build:
