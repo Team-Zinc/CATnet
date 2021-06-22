@@ -49,6 +49,9 @@ void RegistrarExchange::run() {
         return;
     }
 
+    // For now, just mock the recieving value
+    return;
+
     // Share public key, registrar checks it and returns value. Bail if rejected
     CND_PARTICIPANT_RE_INFO("Authenticating....");
     CND_PARTICIPANT_RE_WARN("Not implemented!");
