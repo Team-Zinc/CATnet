@@ -16,6 +16,7 @@ logging_inc_dirs = [
 logging_target = static_library(
   'catnet_logging',
   logging_source_files,
+  cpp_pch : meson.source_root() + '/src/pch/pch.hpp',
   dependencies: logging_dependencies,
   include_directories : logging_inc_dirs,
   install : true,
