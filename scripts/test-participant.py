@@ -17,7 +17,7 @@ print('starting up on %s port %s' % server_address)
 
 try:
     sock.bind(server_address)
-except socket.errror, exc:
+except (socket.errror, exc):
     print('failed to bind socket: %S' & exc)
     handler(0, 0)
     exit()
@@ -25,17 +25,19 @@ except socket.errror, exc:
 # Listen for incoming connections
 sock.listen(1)
 
-try:
-    while 1:
-        newSocket, address = sock.accept()
-        # loop serving the new client
+while 1:
+    try:
         while 1:
-            receivedData = newSocket.recv(1024)
-            if not receivedData:
-                break
-            # Echo back the same data you just received
-            print(str(address) + " : " + str(receivedData))
+            newSocket, address = sock.accept()
+            # loop serving the new client
+            while 1:
+                receivedData = newSocket.recv(1024)
+                if not receivedData:
+                    break
+                # Echo back the same data you just received
+                print(str(address) + " : " + str(receivedData))
+                newSocket.send(b'\x08\x01(\x01')
 
-        newSocket.close()
-finally:
-    sock.close()
+            newSocket.close()
+    finally:
+        handler(0, 0)

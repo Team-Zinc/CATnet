@@ -9,7 +9,8 @@
 #include <vector>
 #include <sodium.h>
 
-#include <message.hpp>
+#include "../message/include/encrypt.hpp" // TODO: Use arrow notation, YouCompleteMe is screaming at me for now
+#include "../message/include/message.hpp" // TODO: Use arrow notation, YouCompleteMe is screaming at me for now
 
 using namespace head_whisker_exchange;
 
@@ -19,17 +20,10 @@ void RegistrarExchange::init() {
     s_Client.emplace("localhost", 30003);
 }
 
-/// \brief Creates a test message, with an ID of one.
-Message create_test_message() {
-    Message test_message;
-    test_message.set_command(Message_Command::Message_Command_TEST_CONNECTION); // Testing command
-    test_message.set_id(get_command_uid());
-
-    return test_message;
-}
-
 void RegistrarExchange::run() {
     init(); // TODO: Figure out how to run this before thread start
+
+    std::vector<unsigned char> vec_message;
 
     // Establish connection
     CND_PARTICIPANT_RE_INFO("Establishing connection to registrar....");
@@ -45,7 +39,6 @@ void RegistrarExchange::run() {
 
     // Convert test message
     CND_PARTICIPANT_RE_DEBUG("Serializing test message....");
-    std::vector<unsigned char> vec_message;
     if (! serialize_message_to_vector(&message, &vec_message)) {
         CND_PARTICIPANT_RE_CRITICAL("Failed to serialize head_whisker_exchange::Message to send over the network.");
         return;
@@ -76,6 +69,20 @@ void RegistrarExchange::run() {
 
     // Encrypt with libSodium
     CND_PARTICIPANT_RE_INFO("Encrypting....");
+    SessionEncryptionState enc_state;
+    Message pk_exchange_message = create_pk_exchange_message(enc_state.get_our_pk());
+
+    if (! serialize_message_to_vector(&pk_exchange_message, &vec_message)) {
+        CND_PARTICIPANT_RE_CRITICAL("Failed to serialize head_whisker_exchange::Message to send over the network for key exchange.");
+        return;
+    }
+
+    if (! s_Client->sendData(&vec_message)) {
+        CND_PARTICIPANT_RE_CRITICAL("Failed to send serialized message for key exchange.");
+        return;
+    }
+
+
     CND_PARTICIPANT_RE_DEBUG("Asking for registrar's public key....");
     CND_PARTICIPANT_RE_DEBUG("Sending registrar our public key....");
 

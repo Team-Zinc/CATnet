@@ -1,5 +1,4 @@
 sockets_source_files = [
-    'message.cpp',
     'socket_compat.cpp',
     'tcp_client_socket.cpp',
     'tcp_server_socket.cpp',
