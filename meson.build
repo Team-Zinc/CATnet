@@ -33,7 +33,6 @@ if not doxygen.found()
 endif
 
 # TODO: Make it so we could build Google ProtoBuf if not found
-# TODO: install on the machine.
 # Google ProtoBuf (Sounds very simular to protogent? Weird flex, but ok!)
 protobuf_dep = dependency('protobuf', version : '>=3.0.0', required : true)
 if not protobuf_dep.found()
@@ -41,6 +40,14 @@ if not protobuf_dep.found()
   message('And no, we are not going to build it for you. Maybe in a future release! :D')
 endif
 protoc = find_program('protoc', required : true)
+
+# TODO: Make it so we could build LibSodium if not found
+# You need your salt
+sodium_dep = dependency('libsodium', required : true)
+if not sodium_dep.found()
+  message('You need LibSodium installed to compile this software.')
+  message('And no, we are not going to build it for you. Maybe in a future release! :D')
+endif
 
 # Threading support (Support Free Trade!)
 thread_dep = dependency('threads')
