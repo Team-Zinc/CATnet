@@ -15,20 +15,22 @@
 
 #define TCP_RECIEVE_ALL_MIN_CHUNK_SIZE 500
 
-class TcpSocket : public Socket {
-    protected:
-        char _host[200];
-        char _port[10];
-        SOCKET _conn;
-        struct addrinfo * _addressInfo;
-        bool _connected;
+class TcpSocket : public Socket
+{
+  protected:
+	char _host[200];
+	char _port[10];
+	SOCKET _conn;
+	struct addrinfo* _addressInfo;
+	bool _connected;
 
-        TcpSocket(const char* host, const short port);
-    public:
-        bool sendData(std::vector<unsigned char>*);
-        bool receiveData(std::vector<unsigned char>*);
-        // void receiveAllData(std::vector<unsigned char>*);
-        bool isConnected();
+	TcpSocket(const char* host, const short port);
+
+  public:
+	bool sendData(std::vector<unsigned char>*);
+	bool receiveData(std::vector<unsigned char>*);
+	// void receiveAllData(std::vector<unsigned char>*);
+	bool isConnected();
 };
 
 #endif /* TCP_SOCKET_HPP */

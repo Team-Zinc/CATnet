@@ -2,11 +2,14 @@
 
 #include <iostream>
 
-void WhiskerExchange::init() {
-}
+void
+WhiskerExchange::init()
+{}
 
-void WhiskerExchange::run() {
-}
+void
+WhiskerExchange::run()
+{}
 
-void WhiskerExchange::destroy() {
-}
+void
+WhiskerExchange::destroy()
+{}

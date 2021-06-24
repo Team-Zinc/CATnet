@@ -13,14 +13,19 @@
 
 #ifndef _WIN32
 #pragma GCC diagnostic warning "-Wunused-function"
-static void closesocket(int socket) { close(socket); }
+static void
+closesocket(int socket)
+{
+	close(socket);
+}
 #endif
 
-
-class TcpClientSocket : public TcpSocket {
-    public:
-        TcpClientSocket(const char * host, const short port) : TcpSocket(host, port) {};
-        void openConnection(void);
+class TcpClientSocket : public TcpSocket
+{
+  public:
+	TcpClientSocket(const char* host, const short port)
+	  : TcpSocket(host, port){};
+	void openConnection(void);
 };
 
 #endif /* TCP_CLIENT_SOCKET_HPP */
