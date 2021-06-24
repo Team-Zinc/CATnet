@@ -48,7 +48,7 @@ bool TcpSocket::sendData(std::vector<unsigned char>* buf) {
     return (size_t)send(_conn, &(*buf)[0], buf->size(), 0) <= buf->size();
 }
 
-/// \brief Receive data from the current socket. Returns true if the message is done.
+/// \brief Receive data from the current socket. Returns true if success.
 bool TcpSocket::receiveData(std::vector<unsigned char>* buf) {
     return (size_t)recv(_conn, &(*buf)[0], buf->size(), 0) <= buf->size();
 }

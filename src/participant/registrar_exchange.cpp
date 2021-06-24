@@ -6,6 +6,8 @@
 
 #include <head_whisker_exchange.pb.h>
 #include <log.hpp>
+#include <vector>
+#include <sodium.h>
 
 #include <message.hpp>
 
@@ -15,6 +17,15 @@ void RegistrarExchange::init() {
     CND_PARTICIPANT_RE_DEBUG("Constructing RegistrarExchange....");
 
     s_Client.emplace("localhost", 30003);
+}
+
+/// \brief Creates a test message, with an ID of one.
+Message create_test_message() {
+    Message test_message;
+    test_message.set_command(Message_Command::Message_Command_TEST_CONNECTION); // Testing command
+    test_message.set_id(get_command_uid());
+
+    return test_message;
 }
 
 void RegistrarExchange::run() {
@@ -30,9 +41,7 @@ void RegistrarExchange::run() {
 
     // Create test message
     CND_PARTICIPANT_RE_DEBUG("Creating test message....");
-    Message message;
-    message.set_command(Message_Command::Message_Command_TEST_CONNECTION); // Testing command
-    message.set_id(1); // Not strictly nessisary
+    Message message = create_test_message();
 
     // Convert test message
     CND_PARTICIPANT_RE_DEBUG("Serializing test message....");
@@ -43,21 +52,36 @@ void RegistrarExchange::run() {
     }
 
     // Send test message
-    CND_PARTICIPANT_RE_INFO("Sending test message....");
+    CND_PARTICIPANT_RE_INFO("Testing connection....");
     if (! s_Client->sendData(&vec_message)) {
         CND_PARTICIPANT_RE_CRITICAL("Failed to send serialized message.");
         return;
     }
 
-    // For now, just mock the recieving value
-    return;
+    std::vector<unsigned char> recieved_vec{};
+    if (! s_Client->receiveData(&recieved_vec)) {
+        CND_PARTICIPANT_RE_CRITICAL("Failed to recieve message sent by registrar (directly after test message.)");
+        return;
+    }
 
-    // Share public key, registrar checks it and returns value. Bail if rejected
-    CND_PARTICIPANT_RE_INFO("Authenticating....");
-    CND_PARTICIPANT_RE_WARN("Not implemented!");
+    Message recieved;
+    deserialize_vector_to_message(recieved, recieved_vec);
+
+    if (recieved.response().size() != 0) {
+        CND_PARTICIPANT_RE_CRITICAL("The registrar you are trying to connect refused connect, or one couldn't be established in the first place: ");
+        for (auto line : recieved.response()) {
+            CND_PARTICIPANT_RE_CRITICAL(line);
+        }
+    }
 
     // Encrypt with libSodium
     CND_PARTICIPANT_RE_INFO("Encrypting....");
+    CND_PARTICIPANT_RE_DEBUG("Asking for registrar's public key....");
+    CND_PARTICIPANT_RE_DEBUG("Sending registrar our public key....");
+
+
+    // Share public key, registrar checks it and returns value. Bail if rejected
+    CND_PARTICIPANT_RE_INFO("Authenticating....");
     CND_PARTICIPANT_RE_WARN("Not implemented!");
 
     // Share ip, hostname, pub key

@@ -27,7 +27,7 @@ class TcpSocket : public Socket {
     public:
         bool sendData(std::vector<unsigned char>*);
         bool receiveData(std::vector<unsigned char>*);
-        void receiveAllData(std::vector<unsigned char>*);
+        // void receiveAllData(std::vector<unsigned char>*);
         bool isConnected();
 };
 

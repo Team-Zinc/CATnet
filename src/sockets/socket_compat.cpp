@@ -45,8 +45,10 @@ void Socket::setUdpTimeout(uint32_t msec) {
 
 void Socket::closeConnection(void) {
 #ifdef _WIN32
+    shutdown(_sock, SD_BOTH);
     closesocket(_sock);
 #else
+    shutdown(_sock, SHUT_RDWR);
     close(_sock);
 #endif
 }
