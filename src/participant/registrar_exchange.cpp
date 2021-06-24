@@ -42,12 +42,12 @@ RegistrarExchange::test_connection()
 
 	// Send test message
 	CND_PARTICIPANT_RE_DEBUG("Sending test message....");
-    if (!s_Client->sendData(&vec_message)) {
+	if (!s_Client->sendData(&vec_message)) {
 		CND_PARTICIPANT_RE_CRITICAL("Failed to send serialized message.");
 		return;
 	}
 
-    CND_PARTICIPANT_RE_DEBUG("Waiting for message to be sent back....");
+	CND_PARTICIPANT_RE_DEBUG("Waiting for message to be sent back....");
 	std::vector<unsigned char> recieved_vec{};
 	if (!s_Client->receiveData(&recieved_vec)) {
 		CND_PARTICIPANT_RE_CRITICAL(
@@ -69,13 +69,15 @@ RegistrarExchange::test_connection()
 	}
 }
 
-void RegistrarExchange::encrypt_session() {
-    std::vector<unsigned char> vec_message;
+void
+RegistrarExchange::encrypt_session()
+{
+	std::vector<unsigned char> vec_message;
 	SessionEncryptionState enc_state;
 	Message pk_exchange_message =
 	  create_pk_exchange_message(enc_state.get_our_pk());
 
-    CND_PARTICIPANT_RE_DEBUG("Serializing key exchange message....");
+	CND_PARTICIPANT_RE_DEBUG("Serializing key exchange message....");
 	if (!serialize_message_to_vector(&pk_exchange_message, &vec_message)) {
 		CND_PARTICIPANT_RE_CRITICAL(
 		  "Failed to serialize head_whisker_exchange::Message to send over the "
@@ -83,13 +85,12 @@ void RegistrarExchange::encrypt_session() {
 		return;
 	}
 
-    CND_PARTICIPANT_RE_DEBUG("Waiting for registrar's public key....");
+	CND_PARTICIPANT_RE_DEBUG("Waiting for registrar's public key....");
 	if (!s_Client->sendData(&vec_message)) {
 		CND_PARTICIPANT_RE_CRITICAL(
 		  "Failed to send serialized message for key exchange.");
 		return;
 	}
-
 }
 
 void
@@ -106,11 +107,11 @@ RegistrarExchange::run()
 		return;
 	}
 
-    CND_PARTICIPANT_RE_INFO("Verifying connection and protobuf integrety....");
+	CND_PARTICIPANT_RE_INFO("Verifying connection and protobuf integrety....");
 	test_connection();
 
-    CND_PARTICIPANT_RE_INFO("Exchanging public keys with registrar....");
-    encrypt_session();
+	CND_PARTICIPANT_RE_INFO("Exchanging public keys with registrar....");
+	encrypt_session();
 
 	CND_PARTICIPANT_RE_DEBUG("Asking for registrar's public key....");
 	CND_PARTICIPANT_RE_DEBUG("Sending registrar our public key....");

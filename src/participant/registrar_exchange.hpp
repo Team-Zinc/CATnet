@@ -14,7 +14,8 @@ class RegistrarExchange
 	static void run();
 
 	static void test_connection();
-    static void encrypt_session();
+	static void encrypt_session();
+
   private:
 	inline static std::optional<TcpClientSocket> s_Client;
 };
