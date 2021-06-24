@@ -27,6 +27,7 @@ jobs:
       with:
         python-version: '3.x'
     - run: sudo apt-get install protobuf-compiler
+    - run: sudo apt-get install libsodium-dev
     - run: pip install meson ninja
     - run: meson setup builddir/
       env:
@@ -50,6 +51,7 @@ jobs:
         python-version: '3.x'
     - run: brew install gcc
     - run: brew install protobuf
+    - run: brew install libsodium
     - run: pip install meson ninja
     - run: meson setup builddir/
       env:
