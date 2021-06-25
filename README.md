@@ -51,7 +51,8 @@ catnet registrar --help
 ## Software Development
 ### Usefull flags
 During development of CATnet, you may wish these flags:
-* `-l0`, enables all levels of logging. Please note that *trace* and *info* logging are disabled in release builds.
+* `-l0`,           enables all levels of logging. Please note that *trace* and *info* logging are disabled in release builds.
+* `-Denable-docs`, pass this to meson while configuring to also generate docs inside `build/src/docs/html`
 
 ### Building
 The way to build CATnet is basically the same as how a regular user would, but instead of running `meson build` you run `meson build --buildtype=debug`
