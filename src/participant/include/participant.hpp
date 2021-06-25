@@ -8,17 +8,17 @@
 class Participant
 {
   public:
-    /// Constructs a Participant.
+	/// Constructs a Participant.
 	Participant();
-    /// Destructs a Particpant.
+	/// Destructs a Particpant.
 	~Participant();
-    /// Creates registrar and whisker exchange threads, and runs them.
+	/// Creates registrar and whisker exchange threads, and runs them.
 	void run();
 
   private:
-    /// Thread for registrar intercommunication.
+	/// Thread for registrar intercommunication.
 	std::thread m_RegistrarExchangeThread;
-    /// Thread for whisker intercommunication.
+	/// Thread for whisker intercommunication.
 	std::thread m_WhiskerExchangeThread;
 };
 

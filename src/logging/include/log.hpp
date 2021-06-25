@@ -27,19 +27,22 @@ class Log
 	static void Init(spdlog::level::level_enum);
 
 	/// A getter function for the daemon logger. Don't call this directly,
-    // instead call the macros.
+	// instead call the macros.
 	static std::shared_ptr<spdlog::logger>& GetLogger(Logger logger)
 	{
 		return s_Loggers.at(logger);
 	}
 
-    /// Getter function for s_Loggers
-   	static std::unordered_map<std::string, spdlog::level::level_enum> GetStrEnumConversionMap();
+	/// Getter function for s_Loggers
+	static std::unordered_map<std::string, spdlog::level::level_enum>
+	GetStrEnumConversionMap();
+
   private:
-    /// Map that contains maping data from an input string to a logging level enum.
-    ///     "debug" -> spd::level::level_enum::DEBUG
-    ///     "error" -> spd::level::level_enum::ERROR
-    inline static std::unordered_map<Logger, std::shared_ptr<spdlog::logger>>
+	/// Map that contains maping data from an input string to a logging level
+	/// enum.
+	///     "debug" -> spd::level::level_enum::DEBUG
+	///     "error" -> spd::level::level_enum::ERROR
+	inline static std::unordered_map<Logger, std::shared_ptr<spdlog::logger>>
 	  s_Loggers;
 };
 
@@ -63,7 +66,6 @@ class Log
 #define CND_DAEMON_CRITICAL(...)                                               \
 	::Log::GetLogger(::Logger::DAEMON)->critical(__VA_ARGS__)
 
-
 /// Worker trace logging macro.
 #define CND_WORKER_TRACE(...)                                                  \
 	::Log::GetLogger(::Logger::DAEMON_WORKER)->trace(__VA_ARGS__)
@@ -82,7 +84,6 @@ class Log
 /// Worker critical logging macro.
 #define CND_WORKER_CRITICAL(...)                                               \
 	::Log::GetLogger(::Logger::DAEMON_WORKER)->critical(__VA_ARGS__)
-
 
 /// Participant trace logging macro.
 #define CND_PARTICIPANT_PE_TRACE(...)                                          \
@@ -103,7 +104,6 @@ class Log
 #define CND_PARTICIPANT_PE_CRITICAL(...)                                       \
 	::Log::GetLogger(::Logger::DAEMON_PARTICIPANT_PE)->critical(__VA_ARGS__)
 
-
 /// Participant registrar exchange trace logging macro.
 #define CND_PARTICIPANT_RE_TRACE(...)                                          \
 	::Log::GetLogger(::Logger::DAEMON_PARTICIPANT_RE)->trace(__VA_ARGS__)
@@ -122,7 +122,6 @@ class Log
 /// Participant registrar exchange critical logging macro.
 #define CND_PARTICIPANT_RE_CRITICAL(...)                                       \
 	::Log::GetLogger(::Logger::DAEMON_PARTICIPANT_RE)->critical(__VA_ARGS__)
-
 
 /// Registrar trace logging macro.
 #define CND_REGISTRAR_TRACE(...)                                               \

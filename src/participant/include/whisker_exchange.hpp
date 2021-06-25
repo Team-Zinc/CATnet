@@ -5,13 +5,13 @@
 class WhiskerExchange
 {
   public:
-    /// Construct a #WhiskerExchange.
+	/// Construct a #WhiskerExchange.
 	static void init();
 
-    /// Destroy a #WhiskerExchange.
+	/// Destroy a #WhiskerExchange.
 	static void destroy();
 
-    /// Run, using the state.
+	/// Run, using the state.
 	static void run();
 };
 
