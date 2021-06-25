@@ -13,10 +13,10 @@
 #include <unistd.h>
 #endif /* __linux__ */
 
-#include <participant.hpp>
-#include <registrar.hpp>
 #include <head_whisker_exchange.pb.h>
 #include <log.hpp>
+#include <participant.hpp>
+#include <registrar.hpp>
 
 /// Application to hold everything
 struct Application
