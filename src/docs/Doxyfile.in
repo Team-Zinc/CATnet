@@ -18,7 +18,7 @@ INPUT                  = @DOXYGEN_INPUT@ @DOXYGEN_PROJECT_ROOT@/README.md
 USE_MDFILE_AS_MAINPAGE = @DOXYGEN_PROJECT_ROOT@/README.md
 EXCLUDE                = @DOXYGEN_INPUT@/proto
 FILE_PATTERNS          = *.h *.hpp *.cpp *.hpp
-RECURSIVE               = YES
+RECURSIVE              = YES
 
 # Output files
 GENERATE_HTML     = YES
