@@ -8,5 +8,4 @@
 #include <unordered_set>
 #include <vector>
 
-#include "../include/args.hpp"
 #include "../logging/include/log.hpp"

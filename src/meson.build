@@ -33,7 +33,7 @@ sockets_inc = include_directories('sockets/include')
 message_inc = include_directories('message/include')
 participant_inc = include_directories('participant/include')
 registrar_inc = include_directories('registrar')
-all_inc = include_directories('include')
+# all_inc = include_directories('include')
 
 
 project_dependencies = [
@@ -57,7 +57,7 @@ inc_dirs = [
   message_inc,
   participant_inc,
   registrar_inc,
-  all_inc
+  # all_inc
 ]
 
 project_target = executable(
