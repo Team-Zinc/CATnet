@@ -16,7 +16,7 @@ SessionEncryptionState::SessionEncryptionState()
 }
 
 void
-SessionEncryptionState::set_other_private_key(
+SessionEncryptionState::set_other_public_key(
   unsigned char oth_pk[crypto_box_PUBLICKEYBYTES])
 {
 	memcpy(m_oth_pk, oth_pk, crypto_box_PUBLICKEYBYTES);
