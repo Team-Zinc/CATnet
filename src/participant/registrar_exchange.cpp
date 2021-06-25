@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-#include "registrar_exchange.hpp"
+#include <registrar_exchange.hpp>
 
 #include <head_whisker_exchange.pb.h>
 #include <log.hpp>

@@ -2,8 +2,8 @@
 
 #include <log.hpp>
 
-#include "registrar_exchange.hpp"
-#include "whisker_exchange.hpp"
+#include <registrar_exchange.hpp>
+#include <whisker_exchange.hpp>
 
 Participant::Participant()
 {

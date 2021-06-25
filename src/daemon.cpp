@@ -13,8 +13,8 @@
 #include <unistd.h>
 #endif /* __linux__ */
 
-#include "participant/participant.hpp"
-#include "registrar/registrar.hpp"
+#include <participant.hpp>
+#include <registrar.hpp>
 #include <head_whisker_exchange.pb.h>
 #include <log.hpp>
 
