@@ -3,8 +3,6 @@
 
 #include <log.hpp>
 
-/// Converts the message protobuf to a vector<unsigned char>. May
-/// resize the into field.
 bool
 serialize_message_to_vector(head_whisker_exchange::Message* message,
 							std::vector<unsigned char>* into)
@@ -19,7 +17,6 @@ serialize_message_to_vector(head_whisker_exchange::Message* message,
 	return message->SerializeToArray(into->data(), byte_size);
 }
 
-/// Converts a vector<unsigned char> to a message protobuf.
 bool
 deserialize_vector_to_message(head_whisker_exchange::Message& into,
 							  std::vector<unsigned char>& from)
@@ -34,7 +31,6 @@ mutate_cstr_to_vector(unsigned char& from, std::vector<unsigned char>& into)
 	  from, from + (sizeof(from) * sizeof(unsigned char)));
 }
 
-/// Gets a unique identifier for a command
 uint64_t
 get_command_uid()
 {
@@ -54,7 +50,6 @@ get_command_uid()
 	return current;
 }
 
-/// Creates a test message, with an ID of one.
 head_whisker_exchange::Message
 create_test_message()
 {
