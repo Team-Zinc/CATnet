@@ -15,6 +15,10 @@ project(
   ]
 )
 
+# add_global_arguments('-I./src/catnet.d/proto', language : 'cpp')
+
+
+
 # Build all of our wraped dependencies first
 
 # Python3 (Wonder when Python4 will come out....)
@@ -52,9 +56,18 @@ endif
 # Threading support (Support Free Trade!)
 thread_dep = dependency('threads')
 
+# Fmtlib (dont format the library)
+# Originally I needed this for SPDLOG to not
+# spit out linker errors, but this is actually
+# a really fucking handy/cool library.
+message('Downloading and building fmtlib....')
+fmt_proj = subproject('fmt')
+fmt_dep = fmt_proj.get_variable('fmt_dep')
+fmt_inc = fmt_proj.get_variable('fmt_inc')
+
 # Spdlog (What the hell does SPD stand for?)
 message('Downloading and building spdlog....')
-spdlog_proj = subproject('spdlog')
+spdlog_proj = subproject('spdlog', default_options : ['compile_library=true'])
 spdlog_dep = spdlog_proj.get_variable('spdlog_dep')
 spdlog_inc = spdlog_proj.get_variable('inc')
 

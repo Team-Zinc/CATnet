@@ -12,13 +12,18 @@
 #include "tcp_socket.hpp"
 
 #ifndef _WIN32
-static void closesocket(int socket) { close(socket); }
+static void
+closesocket(int socket)
+{
+	close(socket);
+}
 #endif
 
-class TcpServerSocket : public TcpSocket {
-    public:
-        TcpServerSocket(const char * host, short port);
-        void acceptConnection(void);
+class TcpServerSocket : public TcpSocket
+{
+  public:
+	TcpServerSocket(const char* host, short port);
+	void acceptConnection(void);
 };
 
 #endif /* TCP_SERVER_SOCKET_HPP */

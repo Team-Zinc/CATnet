@@ -11,9 +11,10 @@
 
 #include "udp_socket.hpp"
 
-class UdpServerSocket : public UdpSocket {
-    public:
-        UdpServerSocket(const short port, const uint32_t timeoutMsec);
+class UdpServerSocket : public UdpSocket
+{
+  public:
+	UdpServerSocket(const short port, const uint32_t timeoutMsec);
 };
 
 #endif /* UDP_SERVER_SOCKET_HPP */

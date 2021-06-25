@@ -14,9 +14,12 @@
 #include <string.h>
 #include <time.h>
 
-class UdpClientSocket : public UdpSocket {
-    public:
-        UdpClientSocket(const char * host, const short port, const uint32_t timeoutMsec);
+class UdpClientSocket : public UdpSocket
+{
+  public:
+	UdpClientSocket(const char* host,
+					const short port,
+					const uint32_t timeoutMsec);
 };
 
 #endif /* UDP_CLIENT_SOCKET_HPP */
