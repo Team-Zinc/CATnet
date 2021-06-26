@@ -32,18 +32,20 @@ void Registrar::run() {
     }
 
     CND_REGISTRAR_TRACE("Listening for connections from participants...");
-
-    head->acceptConnection();
-
-    if (head->isConnected)
+    bool connected = false;
+    while (! connected)
     {
-        CND_REGISTRAR_TRACE("Connected to a participant! creating recieved message...");
-
-        Message recieved;
-
+        head->acceptConnection();
+        if (head->isConnected)
+        {
+            CND_REGISTRAR_TRACE("Connected to a participant!");
+            connected = true;
+        }
+        else
+        {
+            CND_REGISTRAR_TRACE("No connection found, trying again...");
+        }
     }
-
-    
 }
 
 
