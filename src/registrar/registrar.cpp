@@ -1,6 +1,6 @@
 #include "registrar.hpp"
 #include <tcp_socket.hpp>
-#include <tcpserver_socket.hpp>
+#include <tcp_server_socket.hpp>
 #include <thread>
 #include <message.hpp>
 
@@ -37,7 +37,7 @@ void Registrar::run() {
     while (! connected)
     {
         head->acceptConnection();
-        if (head->isConnected)
+        if (head->isConnected())
         {
             CND_REGISTRAR_TRACE("Connected to a participant!");
             connected = true;
