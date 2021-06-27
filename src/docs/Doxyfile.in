@@ -31,4 +31,4 @@ SOURCE_BROWSER = YES
 
 # HTML settings
 HTML_TIMESTAMP = NO
-HTML_EXTRA_STYLESHEET = @DOXYGEN_CURRENT@/doxygen-awesome-css/doxygen-awesome.css
+HTML_EXTRA_STYLESHEET = @DOXYGEN_CURRENT@/doxygen-awesome.css
