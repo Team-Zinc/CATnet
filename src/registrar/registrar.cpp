@@ -1,7 +1,7 @@
 #include "registrar.hpp"
 #include <message.hpp>
-#include <tcp_socket.hpp>
 #include <tcp_server_socket.hpp>
+#include <tcp_socket.hpp>
 #include <thread>
 
 #include "../logging/include/log.hpp"
@@ -39,7 +39,7 @@ Registrar::run()
 		if (s_head->isConnected()) {
 			CND_REGISTRAR_TRACE("Connected to a participant!");
 
-            // Call offshoot function
+			// Call offshoot function
 		}
 	}
 }
