@@ -1,5 +1,5 @@
 #ifndef REGISTRAR_HPP
-#define REDISTRAR_HPP
+#define REGISTRAR_HPP
 
 #include <optional>
 #include <tcp_server_socket.hpp>
@@ -26,5 +26,7 @@ class Registrar
 	void tcp_init();
 
   private:
-	inline static std::optional<TcpServerSocket> head;
+	inline static std::optional<TcpServerSocket> s_head;
 };
+
+#endif /* REGISTRAR_HPP */

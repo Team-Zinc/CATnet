@@ -1,7 +1,7 @@
 #include "registrar.hpp"
 #include <message.hpp>
 #include <tcp_socket.hpp>
-#include <tcpserver_socket.hpp>
+#include <tcp_server_socket.hpp>
 #include <thread>
 
 #include "../logging/include/log.hpp"
@@ -22,26 +22,24 @@ void
 Registrar::tcp_init()
 {
 	CND_REGISTRAR_TRACE("Creating tcp server socket for registrar...");
-	head.emplace("localhost", 44400);
+	s_head.emplace("localhost", 44400);
 }
 
 void
 Registrar::run()
 {
 	CND_REGISTRAR_TRACE("Running in registrar mode....");
-	if (!head.has_value()) {
+	if (!s_head.has_value()) {
 		tcp_init();
 	}
 
 	CND_REGISTRAR_TRACE("Listening for connections from participants...");
-	bool connected = false;
-	while (!connected) {
-		head->acceptConnection();
-		if (head->isConnected) {
+	while (true) {
+		s_head->acceptConnection();
+		if (s_head->isConnected()) {
 			CND_REGISTRAR_TRACE("Connected to a participant!");
-			connected = true;
-		} else {
-			CND_REGISTRAR_TRACE("No connection found, trying again...");
+
+            // Call offshoot function
 		}
 	}
 }
