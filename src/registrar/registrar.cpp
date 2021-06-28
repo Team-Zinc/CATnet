@@ -50,12 +50,12 @@ void Registrar::run() {
             attempts++;
             if (attempts == 10)
             {
-                CND_REGISTRAR_TRACE("Connection timed out.")
+                CND_REGISTRAR_TRACE("Connection timed out.");
                 break;
             }
         }
     }
-    CND_REGISTRAR_TRACE("Sending test message to confirm connection with participant...")
+    CND_REGISTRAR_TRACE("Sending test message to confirm connection with participant...");
     confirm_connection();
 
 }
