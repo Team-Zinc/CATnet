@@ -70,7 +70,7 @@ void Registrar::confirm_connection()
         return;
     }
     if (!head->sendData(&serialized_message)) {
-        CND_REGISTRAR_TRACE("Message was sucessfully serialized, but failed to send")
+        CND_REGISTRAR_TRACE("Message was sucessfully serialized, but failed to send");
         return;
 
         //TODO: make it so that this function runs in response to a test message from RegistrarExchange::test_connection()
