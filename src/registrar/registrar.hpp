@@ -20,8 +20,11 @@ public:
     /// subcommand, and pass that in here. Do not pass them in individually.
     void run();
 
-    // Opens a tcp server socket for the registrar to make connections on
+    /// Opens a tcp server socket for the registrar to make connections on
     void tcp_init();
+
+    /// Confirms the connection with a participant by sending a test message
+    void confirm_connection();
 
     private:
         inline static std::optional<TcpServerSocket> head;
