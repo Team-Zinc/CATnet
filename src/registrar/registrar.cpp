@@ -2,9 +2,11 @@
 #include <tcp_socket.hpp>
 #include <tcp_server_socket.hpp>
 #include <thread>
-#include <message.hpp>
-
+#include "../message/include/message.hpp"
+#include "../message/include/encrypt.hpp"
 #include "../logging/include/log.hpp"
+#include <vector>
+#include <head_whisker_exchange.pb.h>
 
 
 Registrar::Registrar() {
@@ -62,11 +64,11 @@ void Registrar::run() {
 void Registrar::confirm_connection()
 {
     std::vector<unsigned char> serialized_message;
-    Message test = create_test_message();
+    head_whisker_exchange::Message test = create_test_message();
     CND_REGISTRAR_TRACE("Serializing test message");
     if (! serialize_message_to_vector(&test, &serialized_message))
     {
-        CND_REGISTRAR_TRACE("Test message serialization failed.")
+        CND_REGISTRAR_TRACE("Test message serialization failed.");
         return;
     }
     if (!head->sendData(&serialized_message)) {
