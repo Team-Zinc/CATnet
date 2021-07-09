@@ -21,6 +21,9 @@ class Registrar
 	/// If you need to pass in any arguments, please add them to the
 	/// subcommand, and pass that in here. Do not pass them in individually.
 	void run();
+    
+    /// Confirms the connection with a participant by sending a test message
+    void confirm_connection();
 
 	// Opens a tcp server socket for the registrar to make connections on
 	void tcp_init();

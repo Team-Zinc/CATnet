@@ -4,7 +4,11 @@
 #include <tcp_server_socket.hpp>
 #include <thread>
 
-#include "../logging/include/log.hpp"
+#include <message.hpp>
+#include <encrypt.hpp>
+#include <log.hpp>
+#include <vector>
+#include <head_whisker_exchange.pb.h>
 
 Registrar::Registrar()
 {
@@ -40,8 +44,27 @@ Registrar::run()
 			CND_REGISTRAR_TRACE("Connected to a participant!");
 
 			// Call offshoot function
+            CND_REGISTRAR_TRACE("Sending test message to confirm connection with participant...");
+            confirm_connection();
 		}
 	}
+}
+void Registrar::confirm_connection()
+{
+    std::vector<unsigned char> serialized_message;
+    head_whisker_exchange::Message test = create_test_message();
+    CND_REGISTRAR_TRACE("Serializing test message");
+    if (! serialize_message_to_vector(&test, &serialized_message))
+    {
+        CND_REGISTRAR_TRACE("Test message serialization failed.");
+        return;
+    }
+    if (!s_head->sendData(&serialized_message)) {
+        CND_REGISTRAR_TRACE("Message was sucessfully serialized, but failed to send");
+        return;
+
+        //TODO: make it so that this function runs in response to a test message from RegistrarExchange::test_connection()
+    }
 }
 
 Registrar::~Registrar()
