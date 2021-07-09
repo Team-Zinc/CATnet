@@ -8,7 +8,7 @@
 #include <encrypt.hpp>
 #include <log.hpp>
 #include <vector>
-#include <head_whisker_exchange.pb.h>
+#include <base.pb.h>
 
 Registrar::Registrar()
 {
@@ -52,7 +52,7 @@ Registrar::run()
 void Registrar::confirm_connection()
 {
     std::vector<unsigned char> serialized_message;
-    head_whisker_exchange::Message test = create_test_message();
+    base::Message test = create_test_message();
     CND_REGISTRAR_TRACE("Serializing test message");
     if (! serialize_message_to_vector(&test, &serialized_message))
     {

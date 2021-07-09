@@ -10,7 +10,7 @@ subdir('proto')
 # head_whisker_exchange_gened = proto_gen.process('proto/head_whisker_exchange.proto')
 
 project_source_files = [
-  head_whisker_exchange_gened,
+  base_gened, test_connection_gened, pubkey_exchange_gened,
   'participant/participant.cpp',
   'participant/registrar_exchange.cpp',
   'participant/whisker_exchange.cpp',

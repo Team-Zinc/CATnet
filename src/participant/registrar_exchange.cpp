@@ -4,7 +4,7 @@
 
 #include <registrar_exchange.hpp>
 
-#include <head_whisker_exchange.pb.h>
+#include <base.pb.h>
 #include <log.hpp>
 #include <sodium.h>
 #include <vector>
@@ -12,7 +12,7 @@
 #include "../message/include/encrypt.hpp" // TODO: Use arrow notation, YouCompleteMe is screaming at me for now
 #include "../message/include/message.hpp" // TODO: Use arrow notation, YouCompleteMe is screaming at me for now
 
-using namespace head_whisker_exchange;
+using namespace base;
 
 void
 RegistrarExchange::init()
@@ -35,7 +35,7 @@ RegistrarExchange::test_connection()
 	CND_PARTICIPANT_RE_DEBUG("Serializing test message....");
 	if (!serialize_message_to_vector(&message, &vec_message)) {
 		CND_PARTICIPANT_RE_CRITICAL(
-		  "Failed to serialize head_whisker_exchange::Message to send over the "
+		  "Failed to serialize base::Message to send over the "
 		  "network.");
 		return;
 	}
@@ -80,7 +80,7 @@ RegistrarExchange::encrypt_session()
 	CND_PARTICIPANT_RE_DEBUG("Serializing key exchange message....");
 	if (!serialize_message_to_vector(&pk_exchange_message, &vec_message)) {
 		CND_PARTICIPANT_RE_CRITICAL(
-		  "Failed to serialize head_whisker_exchange::Message to send over the "
+		  "Failed to serialize base::Message to send over the "
 		  "network for key exchange.");
 		return;
 	}
