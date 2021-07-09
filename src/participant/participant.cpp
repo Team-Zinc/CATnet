@@ -1,18 +1,20 @@
-#include "participant.hpp"
+#include "include/participant.hpp"
 
 #include <log.hpp>
 
-#include <registrar_exchange.hpp>
-#include <whisker_exchange.hpp>
+#include "include/registrar_exchange.hpp"
+#include "include/whisker_exchange.hpp"
 
 Participant::Participant()
 {
 	m_RegistrarExchangeThread = std::thread(
 	  &RegistrarExchange::run); // Participant Registrar exchange thread
 	m_WhiskerExchangeThread =
-	  std::thread(&WhiskerExchange::run); // Participant Whisker exchange thread
+	  std::thread(&WhiskerExchange::run); // Participant Whisker exchange thread 
 
 	// Constructors (for right now) should be run inside the run methods.
+    // This is because I can't figure out how to share state between threads,
+    // and thus initialising in the main thread wont initialize in the new one.
 	// RegistrarExchange::init();
 	// WhiskerExchange::init();
 }

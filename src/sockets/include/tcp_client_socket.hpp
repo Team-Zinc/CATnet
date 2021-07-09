@@ -13,7 +13,7 @@
 
 #ifndef _WIN32
 #pragma GCC diagnostic warning "-Wunused-function"
-static void
+[[maybe_unused]] static void
 closesocket(int socket)
 {
 	close(socket);

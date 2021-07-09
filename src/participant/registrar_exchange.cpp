@@ -98,6 +98,8 @@ RegistrarExchange::run()
 {
 	init(); // TODO: Figure out how to run this before thread start
 
+    CND_PARTICIPANT_RE_DEBUG("Running registrar exchange....");
+
 	// Establish connection
 	CND_PARTICIPANT_RE_INFO("Establishing connection to registrar....");
 	s_Client->openConnection();

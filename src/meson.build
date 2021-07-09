@@ -25,6 +25,8 @@ project_source_files = [
   'sockets/udp_client_socket.cpp',
   'sockets/udp_server_socket.cpp',
   'sockets/udp_socket.cpp',
+  'tun/alloc.c', # WOHOOOO! C!
+  'tun/tun.cpp',
 ]
 
 logging_inc = include_directories('logging/include')
@@ -32,6 +34,7 @@ sockets_inc = include_directories('sockets/include')
 message_inc = include_directories('message/include')
 participant_inc = include_directories('participant/include')
 registrar_inc = include_directories('registrar')
+tun_inc = include_directories('tun/include')
 # all_inc = include_directories('include')
 
 
@@ -56,7 +59,7 @@ inc_dirs = [
   message_inc,
   participant_inc,
   registrar_inc,
-  # all_inc
+  tun_inc
 ]
 
 # We compile into a library first because we need to

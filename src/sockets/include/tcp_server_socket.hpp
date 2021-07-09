@@ -12,7 +12,7 @@
 #include "tcp_socket.hpp"
 
 #ifndef _WIN32
-static void
+[[ maybe_unused ]] static void
 closesocket(int socket)
 {
 	close(socket);
