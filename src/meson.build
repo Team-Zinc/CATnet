@@ -42,8 +42,6 @@ project_dependencies = [
   fmt_dep,
   cli11_dep,
   protobuf_dep,
-  gtest_dep,
-  gmock_dep,
 ]
 
 build_args = [

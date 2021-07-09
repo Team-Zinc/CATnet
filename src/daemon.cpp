@@ -34,14 +34,10 @@ struct Application
 		if ((fd = open("/dev/random", O_RDONLY)) != -1) {
 			if (ioctl(fd, RNDGETENTCNT, &c) == 0 && c < 160) {
 				std::cerr
-				  << "This system currently doesn't have a high enough entropy "
-					 "level to quickly generate\n"
-					 "random numbers of high quality. Installing "
-					 "rng-utils/tools, jitterentropy or haveged packages\n"
-					 "may help with this. On Linux inside a VM, please cosider "
-					 "using virtio-rng\n\n"
-					 "CATnet will stall until enough entropy has been "
-					 "collected. Please do random actions if\n"
+				  << "This system currently doesn't have a high enough entropy level to quickly generate\n"
+					 "random numbers of high quality. Installing rng-utils/tools, jitterentropy or haveged packages\n"
+					 "may help with this. On Linux inside a VM, please cosider using virtio-rng\n\n"
+					 "CATnet will stall until enough entropy has been collected. Please do random actions if\n"
 					 "you wish to speed this process up!"
 				  << std::endl;
 			}
