@@ -38,6 +38,7 @@ builddir/
 
 # CCLS
 .ccls/*
+.ccls-cache/*
 
 # Ignore VSCode shit
 .vscode
