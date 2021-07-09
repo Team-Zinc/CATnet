@@ -21,7 +21,7 @@ Either download a .tar.gz/.zip from the green *download* button above, or clone 
 ```bash
 git clone https://github.com/ZincSoft/CATNET.git
 ```
-### Installation
+### Building
 CATnet uses the Meson build system, because quite simply, it is one of the best build systems for C++. But you're not here to find out why Meson is so awesome, you just want to build CATnet. To build CATnet, you must have Meson and Ninja installed on your system.
 If on Linux, just install your distros meson package, and ninja will be installed along side it. Same on Mac OS. On Windows, winget doesn't have a package for it. Please look up installation directions for Meson and Ninja on Windows. Or throw your Windows cursed hard drive in a bin. Either works.  
 As of now, you need to libraries installed: LibSodium and Google Protobuf. In the future, we hope to include these in the project so you won't have to download and install them seperate. Your package manager should have packages for them. The following is how to build CATnet.  
