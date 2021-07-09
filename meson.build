@@ -77,4 +77,15 @@ cli11_proj = subproject('cli11')
 cli11_dep = cli11_proj.get_variable('CLI11_dep')
 cli11_inc = cli11_proj.get_variable('CLI11_inc')
 
+# Gtest/Gmock
+if get_option('enable-testing')
+  message('Downloading and building gtest and gmock....')
+  gtest_proj = subproject('gtest')
+  gtest_dep = gtest_proj.get_variable('gtest_dep')
+endif
+
 subdir('src')
+
+# The executable will only be created if enable-testing is given.
+subdir('tests')
+

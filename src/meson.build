@@ -11,7 +11,6 @@ subdir('proto')
 
 project_source_files = [
   head_whisker_exchange_gened,
-  'daemon.cpp',
   'participant/participant.cpp',
   'participant/registrar_exchange.cpp',
   'participant/whisker_exchange.cpp',
@@ -41,7 +40,7 @@ project_dependencies = [
   sodium_dep,
   fmt_dep,
   cli11_dep,
-  protobuf_dep
+  protobuf_dep,
 ]
 
 build_args = [
@@ -60,11 +59,24 @@ inc_dirs = [
   # all_inc
 ]
 
-project_target = executable(
-  'catnetd',
+# We compile into a library first because we need to
+# link the test code with it first.
+project_library_target = static_library(
+  'catnet',
   project_source_files,
   cpp_pch : 'pch/pch.hpp',
   dependencies : project_dependencies,
+  include_directories : inc_dirs,
+  install : false,
+  cpp_args : build_args,
+)
+
+project_target = executable(
+  'catnetd',
+  'daemon.cpp',
+  cpp_pch : 'pch/pch.hpp',
+  dependencies : project_dependencies,
+  link_with : project_library_target,
   include_directories : inc_dirs,
   install : true,
   cpp_args : build_args,

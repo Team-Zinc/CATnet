@@ -69,7 +69,7 @@ create_pk_exchange_message(unsigned char pk[crypto_box_PUBLICKEYBYTES])
 	exchange_message.set_command(
 	  head_whisker_exchange::Message_Command::
 		Message_Command_PUB_KEY_EX); // Exchange public key command
-	exchange_message.set_id(get_command_uid());
+	exchange_message.set_id(0);
 	exchange_message.add_args(static_cast<char*>(static_cast<void*>(pk)));
 
 	return exchange_message;
