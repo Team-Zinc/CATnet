@@ -41,7 +41,9 @@ project_dependencies = [
   sodium_dep,
   fmt_dep,
   cli11_dep,
-  protobuf_dep
+  protobuf_dep,
+  gtest_dep,
+  gmock_dep,
 ]
 
 build_args = [
