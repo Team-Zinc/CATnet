@@ -8,4 +8,5 @@
 #include <unordered_set>
 #include <vector>
 
-#include "../logging/include/log.hpp"
+#include "../src/logging/include/log.hpp"
+#include <gtest/gtest.h>

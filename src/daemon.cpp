@@ -13,7 +13,6 @@
 #include <unistd.h>
 #endif /* __linux__ */
 
-#include <head_whisker_exchange.pb.h>
 #include <log.hpp>
 #include <participant.hpp>
 #include <registrar.hpp>

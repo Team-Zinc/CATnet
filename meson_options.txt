@@ -3,3 +3,9 @@ option('enable-docs',
   value: false,
   description: 'Build Doxygen documentation if available.'
 )
+
+option('enable-testing',
+  type: 'boolean',
+  value: false,
+  description: 'Build tests.'
+)
