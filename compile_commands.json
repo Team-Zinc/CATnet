@@ -55,109 +55,133 @@
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/meson-generated_head_whisker_exchange.pb.cc.o -MF src/libcatnet.a.p/meson-generated_head_whisker_exchange.pb.cc.o.d -o src/libcatnet.a.p/meson-generated_head_whisker_exchange.pb.cc.o -c src/libcatnet.a.p/head_whisker_exchange.pb.cc",
-    "file": "src/libcatnet.a.p/head_whisker_exchange.pb.cc",
-    "output": "src/libcatnet.a.p/meson-generated_head_whisker_exchange.pb.cc.o"
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/meson-generated_base.pb.cc.o -MF src/libcatnet.a.p/meson-generated_base.pb.cc.o.d -o src/libcatnet.a.p/meson-generated_base.pb.cc.o -c src/libcatnet.a.p/base.pb.cc",
+    "file": "src/libcatnet.a.p/base.pb.cc",
+    "output": "src/libcatnet.a.p/meson-generated_base.pb.cc.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/participant_participant.cpp.o -MF src/libcatnet.a.p/participant_participant.cpp.o.d -o src/libcatnet.a.p/participant_participant.cpp.o -c ../src/participant/participant.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/meson-generated_test_connection.pb.cc.o -MF src/libcatnet.a.p/meson-generated_test_connection.pb.cc.o.d -o src/libcatnet.a.p/meson-generated_test_connection.pb.cc.o -c src/libcatnet.a.p/test_connection.pb.cc",
+    "file": "src/libcatnet.a.p/test_connection.pb.cc",
+    "output": "src/libcatnet.a.p/meson-generated_test_connection.pb.cc.o"
+  },
+  {
+    "directory": "/home/milo/Developer/CATNET/build",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/meson-generated_pubkey_exchange.pb.cc.o -MF src/libcatnet.a.p/meson-generated_pubkey_exchange.pb.cc.o.d -o src/libcatnet.a.p/meson-generated_pubkey_exchange.pb.cc.o -c src/libcatnet.a.p/pubkey_exchange.pb.cc",
+    "file": "src/libcatnet.a.p/pubkey_exchange.pb.cc",
+    "output": "src/libcatnet.a.p/meson-generated_pubkey_exchange.pb.cc.o"
+  },
+  {
+    "directory": "/home/milo/Developer/CATNET/build",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/participant_participant.cpp.o -MF src/libcatnet.a.p/participant_participant.cpp.o.d -o src/libcatnet.a.p/participant_participant.cpp.o -c ../src/participant/participant.cpp",
     "file": "../src/participant/participant.cpp",
     "output": "src/libcatnet.a.p/participant_participant.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/participant_registrar_exchange.cpp.o -MF src/libcatnet.a.p/participant_registrar_exchange.cpp.o.d -o src/libcatnet.a.p/participant_registrar_exchange.cpp.o -c ../src/participant/registrar_exchange.cpp",
-    "file": "../src/participant/registrar_exchange.cpp",
-    "output": "src/libcatnet.a.p/participant_registrar_exchange.cpp.o"
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/participant_update_catstate.cpp.o -MF src/libcatnet.a.p/participant_update_catstate.cpp.o.d -o src/libcatnet.a.p/participant_update_catstate.cpp.o -c ../src/participant/update_catstate.cpp",
+    "file": "../src/participant/update_catstate.cpp",
+    "output": "src/libcatnet.a.p/participant_update_catstate.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/participant_whisker_exchange.cpp.o -MF src/libcatnet.a.p/participant_whisker_exchange.cpp.o.d -o src/libcatnet.a.p/participant_whisker_exchange.cpp.o -c ../src/participant/whisker_exchange.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/participant_whisker_exchange.cpp.o -MF src/libcatnet.a.p/participant_whisker_exchange.cpp.o.d -o src/libcatnet.a.p/participant_whisker_exchange.cpp.o -c ../src/participant/whisker_exchange.cpp",
     "file": "../src/participant/whisker_exchange.cpp",
     "output": "src/libcatnet.a.p/participant_whisker_exchange.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/registrar_registrar.cpp.o -MF src/libcatnet.a.p/registrar_registrar.cpp.o.d -o src/libcatnet.a.p/registrar_registrar.cpp.o -c ../src/registrar/registrar.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/registrar_registrar.cpp.o -MF src/libcatnet.a.p/registrar_registrar.cpp.o.d -o src/libcatnet.a.p/registrar_registrar.cpp.o -c ../src/registrar/registrar.cpp",
     "file": "../src/registrar/registrar.cpp",
     "output": "src/libcatnet.a.p/registrar_registrar.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/logging_log.cpp.o -MF src/libcatnet.a.p/logging_log.cpp.o.d -o src/libcatnet.a.p/logging_log.cpp.o -c ../src/logging/log.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/logging_log.cpp.o -MF src/libcatnet.a.p/logging_log.cpp.o.d -o src/libcatnet.a.p/logging_log.cpp.o -c ../src/logging/log.cpp",
     "file": "../src/logging/log.cpp",
     "output": "src/libcatnet.a.p/logging_log.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/message_message.cpp.o -MF src/libcatnet.a.p/message_message.cpp.o.d -o src/libcatnet.a.p/message_message.cpp.o -c ../src/message/message.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/message_message.cpp.o -MF src/libcatnet.a.p/message_message.cpp.o.d -o src/libcatnet.a.p/message_message.cpp.o -c ../src/message/message.cpp",
     "file": "../src/message/message.cpp",
     "output": "src/libcatnet.a.p/message_message.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/message_encrypt.cpp.o -MF src/libcatnet.a.p/message_encrypt.cpp.o.d -o src/libcatnet.a.p/message_encrypt.cpp.o -c ../src/message/encrypt.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/message_encrypt.cpp.o -MF src/libcatnet.a.p/message_encrypt.cpp.o.d -o src/libcatnet.a.p/message_encrypt.cpp.o -c ../src/message/encrypt.cpp",
     "file": "../src/message/encrypt.cpp",
     "output": "src/libcatnet.a.p/message_encrypt.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_socket_compat.cpp.o -MF src/libcatnet.a.p/sockets_socket_compat.cpp.o.d -o src/libcatnet.a.p/sockets_socket_compat.cpp.o -c ../src/sockets/socket_compat.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_socket_compat.cpp.o -MF src/libcatnet.a.p/sockets_socket_compat.cpp.o.d -o src/libcatnet.a.p/sockets_socket_compat.cpp.o -c ../src/sockets/socket_compat.cpp",
     "file": "../src/sockets/socket_compat.cpp",
     "output": "src/libcatnet.a.p/sockets_socket_compat.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_tcp_client_socket.cpp.o -MF src/libcatnet.a.p/sockets_tcp_client_socket.cpp.o.d -o src/libcatnet.a.p/sockets_tcp_client_socket.cpp.o -c ../src/sockets/tcp_client_socket.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_tcp_client_socket.cpp.o -MF src/libcatnet.a.p/sockets_tcp_client_socket.cpp.o.d -o src/libcatnet.a.p/sockets_tcp_client_socket.cpp.o -c ../src/sockets/tcp_client_socket.cpp",
     "file": "../src/sockets/tcp_client_socket.cpp",
     "output": "src/libcatnet.a.p/sockets_tcp_client_socket.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_tcp_server_socket.cpp.o -MF src/libcatnet.a.p/sockets_tcp_server_socket.cpp.o.d -o src/libcatnet.a.p/sockets_tcp_server_socket.cpp.o -c ../src/sockets/tcp_server_socket.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_tcp_server_socket.cpp.o -MF src/libcatnet.a.p/sockets_tcp_server_socket.cpp.o.d -o src/libcatnet.a.p/sockets_tcp_server_socket.cpp.o -c ../src/sockets/tcp_server_socket.cpp",
     "file": "../src/sockets/tcp_server_socket.cpp",
     "output": "src/libcatnet.a.p/sockets_tcp_server_socket.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_tcp_socket.cpp.o -MF src/libcatnet.a.p/sockets_tcp_socket.cpp.o.d -o src/libcatnet.a.p/sockets_tcp_socket.cpp.o -c ../src/sockets/tcp_socket.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_tcp_socket.cpp.o -MF src/libcatnet.a.p/sockets_tcp_socket.cpp.o.d -o src/libcatnet.a.p/sockets_tcp_socket.cpp.o -c ../src/sockets/tcp_socket.cpp",
     "file": "../src/sockets/tcp_socket.cpp",
     "output": "src/libcatnet.a.p/sockets_tcp_socket.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_udp_client_socket.cpp.o -MF src/libcatnet.a.p/sockets_udp_client_socket.cpp.o.d -o src/libcatnet.a.p/sockets_udp_client_socket.cpp.o -c ../src/sockets/udp_client_socket.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_udp_client_socket.cpp.o -MF src/libcatnet.a.p/sockets_udp_client_socket.cpp.o.d -o src/libcatnet.a.p/sockets_udp_client_socket.cpp.o -c ../src/sockets/udp_client_socket.cpp",
     "file": "../src/sockets/udp_client_socket.cpp",
     "output": "src/libcatnet.a.p/sockets_udp_client_socket.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_udp_server_socket.cpp.o -MF src/libcatnet.a.p/sockets_udp_server_socket.cpp.o.d -o src/libcatnet.a.p/sockets_udp_server_socket.cpp.o -c ../src/sockets/udp_server_socket.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_udp_server_socket.cpp.o -MF src/libcatnet.a.p/sockets_udp_server_socket.cpp.o.d -o src/libcatnet.a.p/sockets_udp_server_socket.cpp.o -c ../src/sockets/udp_server_socket.cpp",
     "file": "../src/sockets/udp_server_socket.cpp",
     "output": "src/libcatnet.a.p/sockets_udp_server_socket.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_udp_socket.cpp.o -MF src/libcatnet.a.p/sockets_udp_socket.cpp.o.d -o src/libcatnet.a.p/sockets_udp_socket.cpp.o -c ../src/sockets/udp_socket.cpp",
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/sockets_udp_socket.cpp.o -MF src/libcatnet.a.p/sockets_udp_socket.cpp.o.d -o src/libcatnet.a.p/sockets_udp_socket.cpp.o -c ../src/sockets/udp_socket.cpp",
     "file": "../src/sockets/udp_socket.cpp",
     "output": "src/libcatnet.a.p/sockets_udp_socket.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -fPIC -pthread -DFMT_SHARED -MD -MQ src/libcatnet.a.p/tun_alloc.c.o -MF src/libcatnet.a.p/tun_alloc.c.o.d -o src/libcatnet.a.p/tun_alloc.c.o -c ../src/tun/alloc.c",
-    "file": "../src/tun/alloc.c",
-    "output": "src/libcatnet.a.p/tun_alloc.c.o"
+    "command": "/usr/bin/clang -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c17 -g -fPIC -pthread -DFMT_SHARED -MD -MQ src/libcatnet.a.p/tap_alloc.c.o -MF src/libcatnet.a.p/tap_alloc.c.o.d -o src/libcatnet.a.p/tap_alloc.c.o -c ../src/tap/alloc.c",
+    "file": "../src/tap/alloc.c",
+    "output": "src/libcatnet.a.p/tap_alloc.c.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/tun_tun.cpp.o -MF src/libcatnet.a.p/tun_tun.cpp.o.d -o src/libcatnet.a.p/tun_tun.cpp.o -c ../src/tun/tun.cpp",
-    "file": "../src/tun/tun.cpp",
-    "output": "src/libcatnet.a.p/tun_tun.cpp.o"
+    "command": "/usr/bin/clang++ -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -fPIC -pthread -DFMT_SHARED -include-pch src/libcatnet.a.p/pch.hpp.pch -MD -MQ src/libcatnet.a.p/tap_tap.cpp.o -MF src/libcatnet.a.p/tap_tap.cpp.o.d -o src/libcatnet.a.p/tap_tap.cpp.o -c ../src/tap/tap.cpp",
+    "file": "../src/tap/tap.cpp",
+    "output": "src/libcatnet.a.p/tap_tap.cpp.o"
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/catnetd.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -pthread -DFMT_SHARED -include-pch src/catnetd.p/pch.hpp.pch -MD -MQ src/catnetd.p/daemon.cpp.o -MF src/catnetd.p/daemon.cpp.o.d -o src/catnetd.p/daemon.cpp.o -c ../src/daemon.cpp",
+    "command": "/usr/bin/clang -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c17 -g -fPIC -pthread -DFMT_SHARED -MD -MQ src/libcatnet.a.p/tap_up.c.o -MF src/libcatnet.a.p/tap_up.c.o.d -o src/libcatnet.a.p/tap_up.c.o -c ../src/tap/up.c",
+    "file": "../src/tap/up.c",
+    "output": "src/libcatnet.a.p/tap_up.c.o"
+  },
+  {
+    "directory": "/home/milo/Developer/CATNET/build",
+    "command": "/usr/bin/clang -Isrc/libcatnet.a.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c17 -g -fPIC -pthread -DFMT_SHARED -MD -MQ src/libcatnet.a.p/tap_ip.c.o -MF src/libcatnet.a.p/tap_ip.c.o.d -o src/libcatnet.a.p/tap_ip.c.o -c ../src/tap/ip.c",
+    "file": "../src/tap/ip.c",
+    "output": "src/libcatnet.a.p/tap_ip.c.o"
+  },
+  {
+    "directory": "/home/milo/Developer/CATNET/build",
+    "command": "/usr/bin/clang++ -Isrc/catnetd.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tap/include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -pthread -DFMT_SHARED -include-pch src/catnetd.p/pch.hpp.pch -MD -MQ src/catnetd.p/daemon.cpp.o -MF src/catnetd.p/daemon.cpp.o.d -o src/catnetd.p/daemon.cpp.o -c ../src/daemon.cpp",
     "file": "../src/daemon.cpp",
     "output": "src/catnetd.p/daemon.cpp.o"
   }

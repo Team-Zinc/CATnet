@@ -55,7 +55,7 @@ create_test_message()
 {
 	base::Message test_message;
 
-    test_message.mutable_test_connection(); // Set as the testing commandw
+	test_message.mutable_test_connection(); // Set as the testing commandw
 	test_message.set_id(get_command_uid());
 
 	return test_message;
@@ -66,8 +66,8 @@ create_pk_exchange_message(unsigned char pk[crypto_box_PUBLICKEYBYTES])
 {
 	base::Message exchange_message;
 
-    auto sub = exchange_message.mutable_pubkey_exchange();
-    sub->set_pubkey(reinterpret_cast<char*>(*pk));
+	auto sub = exchange_message.mutable_pubkey_exchange();
+	sub->set_pubkey(reinterpret_cast<char*>(pk));
 	exchange_message.set_id(get_command_uid());
 
 	return exchange_message;

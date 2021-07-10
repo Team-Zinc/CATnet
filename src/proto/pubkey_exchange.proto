@@ -3,5 +3,5 @@ syntax = "proto3";
 package base;
  
 message PubkeyExchange {
-    string pubkey = 1;
+    bytes pubkey = 1;
 }

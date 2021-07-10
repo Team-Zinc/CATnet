@@ -1,18 +1,19 @@
 #include "registrar.hpp"
 #include <message.hpp>
-#include <tcp_socket.hpp>
 #include <tcp_server_socket.hpp>
+#include <tcp_socket.hpp>
 #include <thread>
 
-#include <message.hpp>
+#include <base.pb.h>
 #include <encrypt.hpp>
 #include <log.hpp>
+#include <message.hpp>
 #include <vector>
-#include <base.pb.h>
 
-Registrar::Registrar()
+void
+Registrar::init()
 {
-	CND_REGISTRAR_TRACE("Constructing registrar....");
+	CND_DAEMON_TRACE("Constructing registrar....");
 
 	// NOTICE: threads will be implemented when it is neccicary for the
 	// registrar to do multiple things at once. Currently, all the registrar
@@ -25,49 +26,53 @@ Registrar::Registrar()
 void
 Registrar::tcp_init()
 {
-	CND_REGISTRAR_TRACE("Creating tcp server socket for registrar...");
-	s_head.emplace("localhost", 44400);
+	CND_DAEMON_TRACE("Creating tcp server socket for registrar...");
+	s_server.emplace("localhost", 44400);
 }
 
 void
 Registrar::run()
 {
-	CND_REGISTRAR_TRACE("Running in registrar mode....");
-	if (!s_head.has_value()) {
+	CND_DAEMON_TRACE("Running in registrar mode....");
+	if (!s_server.has_value()) {
 		tcp_init();
 	}
 
-	CND_REGISTRAR_TRACE("Listening for connections from participants...");
+	CND_DAEMON_TRACE("Listening for connections from participants...");
 	while (true) {
-		s_head->acceptConnection();
-		if (s_head->isConnected()) {
-			CND_REGISTRAR_TRACE("Connected to a participant!");
+		s_server->acceptConnection();
+		if (s_server->isConnected()) {
+			CND_DAEMON_TRACE("Connected to a participant!");
 
 			// Call offshoot function
-            CND_REGISTRAR_TRACE("Sending test message to confirm connection with participant...");
-            confirm_connection();
+			CND_DAEMON_TRACE(
+			  "Sending test message to confirm connection with participant...");
+			confirm_connection();
 		}
 	}
 }
-void Registrar::confirm_connection()
+void
+Registrar::confirm_connection()
 {
-    std::vector<unsigned char> serialized_message;
-    base::Message test = create_test_message();
-    CND_REGISTRAR_TRACE("Serializing test message");
-    if (! serialize_message_to_vector(&test, &serialized_message))
-    {
-        CND_REGISTRAR_TRACE("Test message serialization failed.");
-        return;
-    }
-    if (!s_head->sendData(&serialized_message)) {
-        CND_REGISTRAR_TRACE("Message was sucessfully serialized, but failed to send");
-        return;
+	std::vector<unsigned char> serialized_message;
+	base::Message test = create_test_message();
+	CND_DAEMON_TRACE("Serializing test message");
+	if (!serialize_message_to_vector(&test, &serialized_message)) {
+		CND_DAEMON_TRACE("Test message serialization failed.");
+		return;
+	}
+	if (!s_server->sendData(&serialized_message)) {
+		CND_DAEMON_TRACE(
+		  "Message was sucessfully serialized, but failed to send");
+		return;
 
-        //TODO: make it so that this function runs in response to a test message from RegistrarExchange::test_connection()
-    }
+		// TODO: make it so that this function runs in response to a test
+		// message from RegistrarExchange::test_connection()
+	}
 }
 
-Registrar::~Registrar()
+void
+Registrar::destroy()
 {
-	CND_REGISTRAR_TRACE("Destructing registrar....");
+	CND_DAEMON_TRACE("Destructing registrar....");
 }

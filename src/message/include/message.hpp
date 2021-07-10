@@ -1,16 +1,15 @@
 #ifndef MESSAGE_HPP
 #define MESSAGE_HPP
 
-#include <chrono>
 #include <base.pb.h>
+#include <chrono>
 #include <sodium.h>
 #include <vector>
 
 /// Converts the message protobuf to a vector<unsigned char>. May
 /// resize the into field.
 bool
-serialize_message_to_vector(base::Message*,
-							std::vector<unsigned char>*);
+serialize_message_to_vector(base::Message*, std::vector<unsigned char>*);
 
 /// Converts a vector<unsigned char> to a message protobuf.
 bool
