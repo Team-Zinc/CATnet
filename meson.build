@@ -92,7 +92,3 @@ subdir('src')
 
 # The executable will only be created if enable-testing is given.
 subdir('tests')
-
-
-
-
