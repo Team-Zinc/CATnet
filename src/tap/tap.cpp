@@ -18,14 +18,13 @@ extern "C"
 TapDevice::TapDevice()
 {
     CND_DAEMON_DEBUG("Allocating tap device....");
-    AllocatedTap* tap = tap_alloc();
-	if (tap == nullptr) {
+	if (tap_alloc(&m_tap) != 0) {
         CND_DAEMON_CRITICAL(fmt::format("Failed to create tap device: {}", strerror(errno)));
         exit(EXIT_FAILURE);
     }
 
     CND_DAEMON_DEBUG("Bringing tap device up....");
-    if (bring_tap_up(tap) != 0) {
+    if (bring_tap_up(&m_tap) != 0) {
         CND_DAEMON_CRITICAL(fmt::format("Failed to bring tap device up: {}", strerror(errno)));
         exit(EXIT_FAILURE);
     }

@@ -17,6 +17,7 @@ class TapDevice
     std::vector<char>* read_incomming_data();
   private:
 	int m_device;
+    AllocatedTap m_tap;
 };
 
 #endif /* TUNH_HPP */

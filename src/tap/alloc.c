@@ -12,22 +12,21 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-/// Allocates a tap device. The kernel picks the name
+/// Allocates a tap->device. The kernel picks the name
 /// of the device.
-/// https://www.kernel.org/doc/Documentation/networking/taptap.txt
+/// https://www.kernel.org/doc/Documentation/networking/tap->ap.txt
 /// I love linux documentation. Seriously. I do.
-/// TODO: Support multiqueue (paralell tap)
-AllocatedTap*
-tap_alloc()
+/// TODO: Support multiqueue (paralell tap->
+int
+tap_alloc(AllocatedTap* tap)
 {
 #ifdef __linux__
-    static AllocatedTap tap;
     static struct ifreq ifr;
     int fd, err;
     char dev[16] = "\0"; // Let the kernel pick a name
 
     if ((fd = open(TUN_CLONE_DEVICE, O_RDWR)) < 0) {
-        return NULL;
+        return -1;
     }
 
     memset(&ifr, 0, sizeof(ifr));
@@ -39,15 +38,15 @@ tap_alloc()
 
     if ((err = ioctl(fd, TUNSETIFF, (void *) &ifr)) < 0) {
         close(fd);
-        return NULL;
+        return -1;
     }
 
     strcpy(dev, ifr.ifr_name);
 
-    tap.device = fd;
-    tap.ifr = &ifr;
+    tap->device = fd;
+    tap->ifr = &ifr;
 
-    return &tap;
+    return 0;
 #else
 #error I know non-linux is techinically supported, but I do not have access to a MacOS testing machine right now. As such, the TUN wrapper doesn't work. Expect this to be fixed in less than a week.
 #endif

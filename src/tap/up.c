@@ -18,10 +18,12 @@ int bring_tap_up(AllocatedTap* tap) {
         return -1;
     }
 
-    tap->ifr->ifr_flags |= IFF_UP;
-    
-    printf("%s\n", tap->ifr->ifr_name);
+    printf("%d", fd);
+    if ((err = ioctl(fd, SIOCGIFFLAGS, &tap->ifr)) == -1) {
+        return err;
+    }
 
+    tap->ifr->ifr_flags |= IFF_UP;
     if ((err = ioctl(fd, SIOCSIFFLAGS, &tap->ifr)) == -1) {
         return err;
     }

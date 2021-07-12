@@ -10,6 +10,6 @@ typedef struct {
     struct ifreq* ifr;
 } AllocatedTap;
 
-AllocatedTap* tap_alloc();
+int tap_alloc(AllocatedTap* tap);
 
 #endif /* ALLOC_H */
