@@ -31,7 +31,11 @@ while 1:
             newSocket, address = sock.accept()
             # loop serving the new client
             while 1:
-                receivedData = newSocket.recv(1024)
+                try:
+                    receivedData = newSocket.recv(1024)
+                except:
+                    continue
+
                 if not receivedData:
                     break
                 # Echo back the same data you just received

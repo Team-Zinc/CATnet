@@ -1,20 +1,15 @@
-#include "participant.hpp"
+#include "include/participant.hpp"
 
 #include <log.hpp>
 
-#include <registrar_exchange.hpp>
-#include <whisker_exchange.hpp>
+#include "include/update_catstate.hpp"
+#include "include/whisker_exchange.hpp"
 
-Participant::Participant()
+void
+Participant::init()
 {
-	m_RegistrarExchangeThread = std::thread(
-	  &RegistrarExchange::run); // Participant Registrar exchange thread
-	m_WhiskerExchangeThread =
-	  std::thread(&WhiskerExchange::run); // Participant Whisker exchange thread
-
-	// Constructors (for right now) should be run inside the run methods.
-	// RegistrarExchange::init();
-	// WhiskerExchange::init();
+	RegistrarExchange::init();
+	WhiskerExchange::init();
 }
 
 void
@@ -23,14 +18,19 @@ Participant::run()
 	// We need to start a thread to communicate with the registrar,
 	// and to forward/send/receive packets from other whiskers.
 
-	CND_PARTICIPANT_RE_DEBUG(
-	  "Starting registrar and whisker communication based exchange "
-	  "threads....");
-	m_RegistrarExchangeThread.join();
-	m_WhiskerExchangeThread.join();
+	CND_DAEMON_DEBUG("Updating catstate....");
+	if (RegistrarExchange::update_catstate() != 0) {
+        return;
+    }
+
+	CND_DAEMON_DEBUG("Startinig whisker exchange");
+	if (WhiskerExchange::run() != 0) {
+        return;
+    }
 }
 
-Participant::~Participant()
+void
+Participant::destroy()
 {
 	RegistrarExchange::destroy();
 	WhiskerExchange::destroy();

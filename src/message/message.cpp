@@ -1,10 +1,10 @@
 #include "include/message.hpp"
-#include "head_whisker_exchange.pb.h"
+#include "base.pb.h"
 
 #include <log.hpp>
 
 bool
-serialize_message_to_vector(head_whisker_exchange::Message* message,
+serialize_message_to_vector(base::Message* message,
 							std::vector<unsigned char>* into)
 {
 	size_t byte_size = message->ByteSizeLong();
@@ -18,7 +18,7 @@ serialize_message_to_vector(head_whisker_exchange::Message* message,
 }
 
 bool
-deserialize_vector_to_message(head_whisker_exchange::Message& into,
+deserialize_vector_to_message(base::Message& into,
 							  std::vector<unsigned char>& from)
 {
 	return into.ParseFromArray(from.data(), from.size());
@@ -50,27 +50,25 @@ get_command_uid()
 	return current;
 }
 
-head_whisker_exchange::Message
+base::Message
 create_test_message()
 {
-	head_whisker_exchange::Message test_message;
-	test_message.set_command(
-	  head_whisker_exchange::Message_Command::
-		Message_Command_TEST_CONNECTION); // Testing command
+	base::Message test_message;
+
+	test_message.mutable_test_connection(); // Set as the testing commandw
 	test_message.set_id(get_command_uid());
 
 	return test_message;
 }
 
-head_whisker_exchange::Message
+base::Message
 create_pk_exchange_message(unsigned char pk[crypto_box_PUBLICKEYBYTES])
 {
-	head_whisker_exchange::Message exchange_message;
-	exchange_message.set_command(
-	  head_whisker_exchange::Message_Command::
-		Message_Command_PUB_KEY_EX); // Exchange public key command
-	exchange_message.set_id(0);
-	exchange_message.add_args(static_cast<char*>(static_cast<void*>(pk)));
+	base::Message exchange_message;
+
+	auto sub = exchange_message.mutable_pubkey_exchange();
+	sub->set_pubkey(reinterpret_cast<char*>(pk));
+	exchange_message.set_id(get_command_uid());
 
 	return exchange_message;
 }

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import 'test_connection.proto';
+import 'pubkey_exchange.proto';
+
+package base;
+ 
+message Message {
+    oneof command {
+        TestConnection test_connection = 1;
+        PubkeyExchange pubkey_exchange = 2;
+    }
+    
+    repeated string response = 3;
+    int32 id = 4;
+}
+

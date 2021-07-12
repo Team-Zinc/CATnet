@@ -1,20 +1,19 @@
 #ifndef MESSAGE_HPP
 #define MESSAGE_HPP
 
+#include <base.pb.h>
 #include <chrono>
-#include <head_whisker_exchange.pb.h>
 #include <sodium.h>
 #include <vector>
 
 /// Converts the message protobuf to a vector<unsigned char>. May
 /// resize the into field.
 bool
-serialize_message_to_vector(head_whisker_exchange::Message*,
-							std::vector<unsigned char>*);
+serialize_message_to_vector(base::Message*, std::vector<unsigned char>*);
 
 /// Converts a vector<unsigned char> to a message protobuf.
 bool
-deserialize_vector_to_message(head_whisker_exchange::Message& into,
+deserialize_vector_to_message(base::Message& into,
 							  std::vector<unsigned char>& from);
 
 /// Convert a cstr to a vector
@@ -24,11 +23,11 @@ void
 mutate_cstr_to_vector(unsigned char& from, std::vector<unsigned char>& into);
 
 /// Create a test message.
-head_whisker_exchange::Message
+base::Message
 create_test_message();
 
 /// Create a public key exchage message
-head_whisker_exchange::Message
+base::Message
 create_pk_exchange_message(unsigned char pk[crypto_box_PUBLICKEYBYTES]);
 
 /// Get a command uid from the time. DO NOT USE AS A NONCE.

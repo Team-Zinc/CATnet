@@ -10,9 +10,9 @@ subdir('proto')
 # head_whisker_exchange_gened = proto_gen.process('proto/head_whisker_exchange.proto')
 
 project_source_files = [
-  head_whisker_exchange_gened,
+  base_gened, test_connection_gened, pubkey_exchange_gened,
   'participant/participant.cpp',
-  'participant/registrar_exchange.cpp',
+  'participant/update_catstate.cpp',
   'participant/whisker_exchange.cpp',
   'registrar/registrar.cpp',
   'logging/log.cpp',
@@ -25,6 +25,10 @@ project_source_files = [
   'sockets/udp_client_socket.cpp',
   'sockets/udp_server_socket.cpp',
   'sockets/udp_socket.cpp',
+  'tap/alloc.c', # WOHOOOO! C!
+  'tap/tap.cpp',
+  'tap/up.c', # More C!
+  'tap/ip.c' # Still great C!
 ]
 
 logging_inc = include_directories('logging/include')
@@ -32,6 +36,7 @@ sockets_inc = include_directories('sockets/include')
 message_inc = include_directories('message/include')
 participant_inc = include_directories('participant/include')
 registrar_inc = include_directories('registrar')
+tap_inc = include_directories('tap/include')
 # all_inc = include_directories('include')
 
 
@@ -56,7 +61,7 @@ inc_dirs = [
   message_inc,
   participant_inc,
   registrar_inc,
-  # all_inc
+  tap_inc
 ]
 
 # We compile into a library first because we need to

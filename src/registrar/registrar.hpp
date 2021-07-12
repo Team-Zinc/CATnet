@@ -6,30 +6,32 @@
 #include <vector>
 /// \brief Registrar class that contains all the data needed for runtime in case
 /// of registrar mode.
-class Registrar
-{
-  public:
-	/// \brief Constructor for the registrar.
-	/// If you need to pass in any arguments, please add them to the
-	/// subcommand, and pass that in here. Do not pass them in individually.
-	Registrar();
+namespace Registrar {
+/// Constructor for the registrar.
+/// If you need to pass in any arguments, please add them to the
+/// subcommand, and pass that in here. Do not pass them in individually.
+void
+init();
 
-	/// \brief Destructor for the registrar.
-	~Registrar();
+/// \brief Destructor for the registrar.
+void
+destroy();
 
-	/// \brief Run the main code that actually gives the registrar purpose.
-	/// If you need to pass in any arguments, please add them to the
-	/// subcommand, and pass that in here. Do not pass them in individually.
-	void run();
-    
-    /// Confirms the connection with a participant by sending a test message
-    void confirm_connection();
+/// \brief Run the main code that actually gives the registrar purpose.
+/// If you need to pass in any arguments, please add them to the
+/// subcommand, and pass that in here. Do not pass them in individually.
+void
+run();
 
-	// Opens a tcp server socket for the registrar to make connections on
-	void tcp_init();
+/// Confirms the connection with a participant by sending a test message
+void
+confirm_connection();
 
-  private:
-	inline static std::optional<TcpServerSocket> s_head;
+// Opens a tcp server socket for the registrar to make connections on
+void
+tcp_init();
+
+inline static std::optional<TcpServerSocket> s_server;
 };
 
 #endif /* REGISTRAR_HPP */
