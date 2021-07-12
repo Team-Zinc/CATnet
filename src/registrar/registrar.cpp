@@ -16,7 +16,7 @@ Registrar::Registrar() {
     // Currently, all the registrar needs to do is connect to a wasker and inform it that it has connected
 
     // this section will also deal with storing participant info with JSON in the future
-
+    tcp_init();
 
 }
 
@@ -29,10 +29,6 @@ void Registrar::tcp_init()
 
 void Registrar::run() {
     CND_REGISTRAR_TRACE("Running in registrar mode....");
-    if (! head.has_value())
-    {
-        tcp_init();
-    }
 
     CND_REGISTRAR_TRACE("Listening for connections from participants...");
     bool connected = false;
@@ -57,12 +53,25 @@ void Registrar::run() {
             }
         }
     }
-    CND_REGISTRAR_TRACE("Sending test message to confirm connection with participant...");
+    CND_REGISTRAR_TRACE("Testing connection with participant...");
     confirm_connection();
-
 }
 void Registrar::confirm_connection()
 {
+    
+    std::vector<unsigned char> recieved_message{};
+    
+
+    if (!head->receiveData(&recieved_message)){
+        CND_REGISTRAR_TRACE("No test message was recieved from participant.");
+        return;
+    }
+
+    head_whisker_exchange::Message recieved_deserialized;
+    deserialize_vector_to_message(recieved_deserialized, recieved_message);
+    CND_REGISTRAR_TRACE("Test message recieved, replying...");
+    //TODO: find somewhere to dump/desplay the newly deserialized test message from the participant
+
     std::vector<unsigned char> serialized_message;
     head_whisker_exchange::Message test = create_test_message();
     CND_REGISTRAR_TRACE("Serializing test message");
@@ -71,11 +80,13 @@ void Registrar::confirm_connection()
         CND_REGISTRAR_TRACE("Test message serialization failed.");
         return;
     }
+
     if (!head->sendData(&serialized_message)) {
         CND_REGISTRAR_TRACE("Message was sucessfully serialized, but failed to send");
         return;
-
-        //TODO: make it so that this function runs in response to a test message from RegistrarExchange::test_connection()
+    }
+    else {
+        CND_REGISTRAR_TRACE("Message sent!");
     }
 
 
