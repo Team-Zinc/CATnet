@@ -18,6 +18,8 @@ Registrar::init()
 	// NOTICE: threads will be implemented when it is neccicary for the
 	// registrar to do multiple things at once. Currently, all the registrar
 	// needs to do is connect to a wasker and inform it that it has connected
+    // this section will also deal with storing participant info with JSON in the future
+    tcp_init();
 
 	// this section will also deal with storing participant info with JSON in
 	// the future
@@ -54,21 +56,34 @@ Registrar::run()
 void
 Registrar::confirm_connection()
 {
-	std::vector<unsigned char> serialized_message;
-	base::Message test = create_test_message();
-	CND_DAEMON_TRACE("Serializing test message");
-	if (!serialize_message_to_vector(&test, &serialized_message)) {
-		CND_DAEMON_TRACE("Test message serialization failed.");
-		return;
-	}
-	if (!s_server->sendData(&serialized_message)) {
-		CND_DAEMON_TRACE(
-		  "Message was sucessfully serialized, but failed to send");
-		return;
+    std::vector<unsigned char> recieved_message{};  
 
-		// TODO: make it so that this function runs in response to a test
-		// message from RegistrarExchange::test_connection()
-	}
+    if (!s_server->receiveData(&recieved_message)){
+        CND_REGISTRAR_TRACE("No test message was recieved from participant.");
+        return;
+    }
+
+    base::Message recieved_deserialized;
+    deserialize_vector_to_message(recieved_deserialized, recieved_message);
+    CND_REGISTRAR_TRACE("Test message recieved, replying...");
+    //TODO: find somewhere to dump/desplay the newly deserialized test message from the participant
+
+    std::vector<unsigned char> serialized_message;
+    base::Message test = create_test_message();
+    CND_REGISTRAR_TRACE("Serializing test message");
+    if (! serialize_message_to_vector(&test, &serialized_message))
+    {
+        CND_REGISTRAR_TRACE("Test message serialization failed.");
+        return;
+    }
+
+    if (!head->sendData(&serialized_message)) {
+        CND_REGISTRAR_TRACE("Message was sucessfully serialized, but failed to send");
+        return;
+    }
+    else {
+        CND_REGISTRAR_TRACE("Message sent!");
+    }
 }
 
 void
