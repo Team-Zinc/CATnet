@@ -84,8 +84,11 @@ if get_option('enable-testing')
   gtest_dep = gtest_proj.get_variable('gtest_dep')
 endif
 
+message('Downloading an installing json (nlohmann)....')
+json_proj = subproject('nlohmann_json')
+json_dep = json_proj.get_variable('nlohmann_json_dep')
+
 subdir('src')
 
 # The executable will only be created if enable-testing is given.
 subdir('tests')
-

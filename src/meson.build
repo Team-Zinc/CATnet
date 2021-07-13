@@ -46,6 +46,7 @@ project_dependencies = [
   fmt_dep,
   cli11_dep,
   protobuf_dep,
+  json_dep
 ]
 
 build_args = [
