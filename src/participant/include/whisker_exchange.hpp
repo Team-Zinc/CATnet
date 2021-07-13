@@ -2,7 +2,7 @@
 #define WHISKER_EXCHANGE_HPP
 
 #include <optional>
-#include <tap.hpp>
+#include <tun.hpp>
 
 /// Contains all the state information needed exchange with another whisker.
 namespace WhiskerExchange {
@@ -18,9 +18,9 @@ destroy();
 int
 run();
 
-/// The tap device that we use to capture packets,
+/// The tun device that we use to capture packets,
 /// to redirect them.
-inline std::optional<TapDevice> m_tap;
+inline std::optional<TunDevice> m_tun;
 };
 
 #endif

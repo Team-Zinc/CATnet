@@ -5,22 +5,6 @@
 #include <sodium.h>
 #include <vector>
 
-/// Raised on decryption failure. Does not have a "reason", as libSodium doesn't
-/// offer that.
-struct DecryptionException : public std::exception
-{
-	/// Exception description
-	const char* what() const throw() { return "Failed to dencrypt message"; }
-};
-
-/// Raised on encryption failure. Does not have a "reason", as libSodium doesn't
-/// offer that.
-struct EncryptionException : public std::exception
-{
-	/// Exception description
-	const char* what() const throw() { return "Failed to encrypt message"; }
-};
-
 /// Contains state information nessisary for encryption and decryption.
 /// Despite it's name, it is used for decyption also.
 class SessionEncryptionState
@@ -38,8 +22,7 @@ class SessionEncryptionState
 	void set_other_public_key(unsigned char oth_pk[crypto_box_PUBLICKEYBYTES]);
 
 	/// Encrypts a message, and then return it.
-	std::vector<unsigned char> encrypt_message(
-	  std::vector<unsigned char> message);
+	int encrypt_message(std::vector<unsigned char> message, std::vector<unsigned char>* buf);
 
 	/// Getter function for our public key.
 	/// For example, if this is running on the participant,

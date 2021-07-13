@@ -3,7 +3,7 @@
 
 #include "alloc.h"
 
-int bring_tap_up(AllocatedTap* tun);
+int bring_tun_up(AllocatedTun* tun);
 
 #endif /* UP_H */
 
