@@ -22,8 +22,8 @@ SessionEncryptionState::set_other_public_key(
 	memcpy(m_oth_pk, oth_pk, crypto_box_PUBLICKEYBYTES);
 }
 
-std::vector<unsigned char>
-SessionEncryptionState::encrypt_message(std::vector<unsigned char> message)
+int
+SessionEncryptionState::encrypt_message(std::vector<unsigned char> message, std::vector<unsigned char>* buf)
 {
 	// Generate our nonce. Even though this is random number,
 	// and there still *could* be collisions, it is such a small
@@ -45,11 +45,11 @@ SessionEncryptionState::encrypt_message(std::vector<unsigned char> message)
 						nonce,
 						m_our_pk,
 						m_our_sk) == -1) {
-		throw EncryptionException();
-	}
+	    return -1;
+    }
 
-	mutate_cstr_to_vector(*ciphertext, ret);
-	return ret;
+	mutate_cstr_to_vector(*ciphertext, *buf);
+	return 0;
 }
 
 SessionEncryptionState::~SessionEncryptionState()

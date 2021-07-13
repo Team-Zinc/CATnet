@@ -6,10 +6,11 @@
 /// Basically a wrapper around a device and
 /// the kernel chosen name for a TUN device.
 typedef struct {
-    int device;
+    int device, sock;
     struct ifreq* ifr;
-} AllocatedTap;
+} AllocatedTun;
 
-AllocatedTap* tap_alloc();
+int tun_alloc(AllocatedTun* tun);
+void tun_dealloc(AllocatedTun* tun);
 
 #endif /* ALLOC_H */

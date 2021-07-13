@@ -21,22 +21,21 @@ WhiskerExchange::run()
 	CND_DAEMON_INFO("Running whisker exchange....");
 
 	CND_DAEMON_INFO("Creating TUN device...");
-	m_tap.emplace(TapDevice());
-
-	if (!m_tap->is_ok()) {
-		CND_DAEMON_CRITICAL(
-		  fmt::format("Failed to create tap device: {}", strerror(errno)));
+    auto dev = TunDevice();
+    if (dev.init() != 0) {
 		return -1;
-	}
+    }
+
+    m_tun.emplace(dev);
 
     CND_DAEMON_INFO("Listening for packets....");
 	while (true) {
 	    CND_DAEMON_TRACE("frame:");
-        auto buf = m_tap->read_incomming_data();
+        auto buf = m_tun->read_incomming_data();
 
         if (buf == nullptr) {
             // there mustve been an error reading from the
-            // tap interface. It's already logged, so we
+            // tun interface. It's already logged, so we
             // can just continue
             continue;
         }
