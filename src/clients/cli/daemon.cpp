@@ -2,14 +2,6 @@
 #error Please note that CATNET is not supported on Windows. This is because we do not have a testing machine. // TODO: Add windows support
 #endif /* _WIN32 */
 
-#ifdef __APPLE__
-#include <TargetConditionals.h>
-#ifdef TARGET_OS_IPHONE
-#error iPhone not supported
-#endif /* TARGET_OS_IPHONE */
-#endif /* __APPLE__ */
-
-
 #include <CLI/CLI.hpp>
 #include <google/protobuf/stubs/common.h>
 #include <sodium.h>

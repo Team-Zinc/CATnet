@@ -77,15 +77,5 @@ project_library_target = static_library(
   cpp_args : build_args,
 )
 
-project_target = executable(
-  'catnetd',
-  'daemon.cpp',
-  cpp_pch : 'pch/pch.hpp',
-  dependencies : project_dependencies,
-  link_with : project_library_target,
-  include_directories : inc_dirs,
-  install : true,
-  cpp_args : build_args,
-)
-
+subdir('clients/cli')
 subdir('docs')
