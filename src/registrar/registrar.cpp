@@ -6,7 +6,6 @@
 #include <thread>
 
 #include <base.pb.h>
-#include "../configuration/include/conf.hpp"
 #include <encrypt.hpp>
 #include <log.hpp>
 #include <message.hpp>
@@ -40,7 +39,7 @@ void
 Registrar::tcp_init()
 {
 	CND_DAEMON_TRACE("Creating tcp server socket for registrar...");
-	s_server.emplace("localhost", Configuration::registrar_config[R_PORT]);
+	s_server.emplace("localhost", 44500);
 }
 
 void
