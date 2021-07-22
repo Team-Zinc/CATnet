@@ -5,7 +5,7 @@
 #include <log.hpp>
 
 /// Creates a TCP socket.
-TcpSocket::TcpSocket(const char* host, const short port)
+TcpSocket::TcpSocket(const char* host, const unsigned short port)
 {
 	sprintf_s(_host, "%s", host);
 	sprintf_s(_port, "%d", port);

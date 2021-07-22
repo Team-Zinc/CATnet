@@ -24,7 +24,7 @@ class TcpSocket : public Socket
 	struct addrinfo* _addressInfo;
 	bool _connected;
 
-	TcpSocket(const char* host, const short port);
+	TcpSocket(const char* host, const unsigned short port);
 
   public:
 	bool sendData(std::vector<unsigned char>*);

@@ -3,6 +3,7 @@
 #include <string>
 
 #include <update_catstate.hpp>
+#include "../configuration/include/conf.hpp"
 
 #include <base.pb.h>
 #include <log.hpp>
@@ -17,7 +18,7 @@ using namespace base;
 void
 RegistrarExchange::init()
 {
-	s_Client.emplace("localhost", 30003);
+    s_Client.emplace("localhost", Configuration::participant_config[P_PORT]);
 }
 
 void

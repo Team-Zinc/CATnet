@@ -11,6 +11,7 @@ subdir('proto')
 
 project_source_files = [
   base_gened, test_connection_gened, pubkey_exchange_gened,
+  'configuration/conf.cpp',
   'participant/participant.cpp',
   'participant/update_catstate.cpp',
   'participant/whisker_exchange.cpp',
@@ -31,6 +32,7 @@ project_source_files = [
   'tun/ip.c' # Still great C!
 ]
 
+conf_inc = include_directories('configuration/include')
 logging_inc = include_directories('logging/include')
 sockets_inc = include_directories('sockets/include')
 message_inc = include_directories('message/include')
@@ -57,6 +59,7 @@ inc_dirs = [
   fmt_inc,
   spdlog_inc,
 
+  conf_inc,
   logging_inc,
   sockets_inc,
   message_inc,

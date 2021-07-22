@@ -181,8 +181,8 @@
   },
   {
     "directory": "/home/milo/Developer/CATNET/build",
-    "command": "/usr/bin/clang++ -Isrc/catnetd.p -Isrc -I../src -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -I../subprojects/nlohmann_json-3.9.1/single_include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -pthread -DFMT_SHARED -include-pch src/catnetd.p/pch.hpp.pch -MD -MQ src/catnetd.p/daemon.cpp.o -MF src/catnetd.p/daemon.cpp.o.d -o src/catnetd.p/daemon.cpp.o -c ../src/daemon.cpp",
-    "file": "../src/daemon.cpp",
-    "output": "src/catnetd.p/daemon.cpp.o"
+    "command": "/usr/bin/clang++ -Isrc/clients/cli/catnetd.p -Isrc/clients/cli -I../src/clients/cli -I../subprojects/CLI11-1.9.1/include -I../subprojects/fmt-7.1.3/include -I../subprojects/spdlog-1.8.2/include -I../src/logging/include -I../src/sockets/include -I../src/message/include -I../src/participant/include -I../src/registrar -I../src/tun/include -I../subprojects/nlohmann_json-3.9.1/single_include -fcolor-diagnostics -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -Wextra -Wpedantic -std=c++17 -g -pthread -DFMT_SHARED -include-pch src/clients/cli/catnetd.p/pch.hpp.pch -MD -MQ src/clients/cli/catnetd.p/daemon.cpp.o -MF src/clients/cli/catnetd.p/daemon.cpp.o.d -o src/clients/cli/catnetd.p/daemon.cpp.o -c ../src/clients/cli/daemon.cpp",
+    "file": "../src/clients/cli/daemon.cpp",
+    "output": "src/clients/cli/catnetd.p/daemon.cpp.o"
   }
 ]

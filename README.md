@@ -1,5 +1,5 @@
-# CATnet
 <p align="center">
+  <h1>CATnet</h1>
   <a href="github.com/ZincSoft/CATNET" target="blank"><img src="assets/logo.png" alt="CATNET Logo" /></a>
     <img src="https://img.shields.io/github/license/ZincSoft/CATNET?:ZincSoft:/CATNET?label=License&style=flat" alt="License">
     <img src="https://img.shields.io/github/stars/ZincSoft/CATNET?:ZincSoft:/CATNET?label=Stars&tyle=flat" alt="Stars">
@@ -49,6 +49,10 @@ catnet registrar --help
 
 
 ## Software Development
+### Best sound track
+#### Contributors add your name here!
+Milo's pick: Dan Croll
+Eli's pick: AJR probably
 ### Usefull flags
 During development of CATnet, you may wish these flags:
 * `-l0`,           enables all levels of logging. Please note that *trace* and *info* logging are disabled in release builds.
@@ -62,7 +66,8 @@ Please see `src/logging/include/log.hpp` to see the macros availble. Please choo
 
 ### Code Guidelines
 In order to make CATnet easier to maintain and understand, we follow the [CppCoreGuidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines). If you need to find out how to style a specific C++ feature, please use your browsers built in search function, or clone it onto your system and `find . | grep x`.
-The first time you use a feature (even if it is trivial, such as function declaration), please look up the prefered way to use it in the guidelines.
+The first time you use a feature (even if it is trivial, such as function declaration), please look up the prefered way to use it in the guidelines.  
+Please no exceptions (as in the error handling kind)!
 
 ### Git Workflow
 Pretend the other people working on this code base are insane, have a shotgun, and know where you live. As such, please follow `WORKFLOW.MD`.
