@@ -2,14 +2,6 @@
 #error Please note that CATNET is not supported on Windows. This is because we do not have a testing machine. // TODO: Add windows support
 #endif /* _WIN32 */
 
-#ifdef __APPLE__
-#include <TargetConditionals.h>
-#ifdef TARGET_OS_IPHONE
-#error iPhone not supported
-#endif /* TARGET_OS_IPHONE */
-#endif /* __APPLE__ */
-
-
 #include <CLI/CLI.hpp>
 #include <google/protobuf/stubs/common.h>
 #include <sodium.h>
@@ -24,6 +16,7 @@
 #include <log.hpp>
 #include <participant.hpp>
 #include <registrar.hpp>
+#include "../../configuration/include/conf.hpp"
 
 /// Application to hold everything
 struct Application
@@ -65,6 +58,8 @@ struct Application
 	// Run the main bulk of the program
 	int run(int argc, char* argv[])
 	{
+        Configuration::InitConfiguration();
+
 		// Tell the user to get help if they are clueless
 		if (argc == 1) {
 			std::cerr << "Please use the -h (--help) flag to get the usage."
@@ -89,6 +84,10 @@ struct Application
 		app.add_option("-l,--level", spdlog_level, "Minimum log output level")
 		  ->transform(CLI::CheckedTransformer(Log::GetStrEnumConversionMap(),
 											  CLI::ignore_case));
+        
+        participant_subcom.add_option("-p,--port", Configuration::participant_config[P_PORT], "Setst he port to communicate on.", true);
+
+        registrar_subcom.add_option("-p,--port", Configuration::registrar_config[R_PORT], "Sets the port to communicate on.", true);
 
 		// Parse command line arguments. There is macro to do this,
 		// CLI11_PARSE(cli_global, argc, argv), but that doesn't seem

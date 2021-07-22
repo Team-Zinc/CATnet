@@ -8,6 +8,7 @@ project(
   default_options : [
     # https://mesonbuild.com/Builtin-options.html
     'warning_level=3', # Enable some good warnings
+    'strip=true', # Strip binaries on install
     'c_std=c17', # Require the C17 standard.
     'cpp_std=c++17', # Require the C++17 standard.
     'cpp_args-I=@BUILD_ROOT@/src/catnetd.p', # Include generated protobuf header.

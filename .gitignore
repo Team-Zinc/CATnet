@@ -32,6 +32,9 @@
 *.out
 *.app
 
+# Rust build directories
+**/target/
+
 # Meson build directories
 build/
 builddir/
