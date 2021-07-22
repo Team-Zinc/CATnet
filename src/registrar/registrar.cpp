@@ -39,7 +39,7 @@ void
 Registrar::tcp_init()
 {
 	CND_DAEMON_TRACE("Creating tcp server socket for registrar...");
-	s_server.emplace("localhost", 44500);
+	s_server.emplace("localhost", 44400);
 }
 
 void
